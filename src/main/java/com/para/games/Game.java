@@ -4,16 +4,16 @@ public class Game {
     private int id;
     private String title;
     private double price;
-    private String descriton;
+    private String description;
     private Integer year;
 
     public Game() {
     }
-    public Game(int id, String title, double price, String descriton, Integer year) {
+    public Game(int id, String title, double price, String description, Integer year) {
         this.id = id;
         this.title = title;
         this.price = price;
-        this.descriton = descriton;
+        this.description = description;
         this.year = year;
     }
 
@@ -41,12 +41,12 @@ public class Game {
         this.price = price;
     }
 
-    public String getDescriton() {
-        return descriton;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescriton(String descriton) {
-        this.descriton = descriton;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getYear() {
