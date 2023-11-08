@@ -1,11 +1,21 @@
 package com.para.games;
 
-public class Game {
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+@Entity
+public class Game implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, updatable = false)
     private int id;
     private String title;
     private double price;
     private String description;
     private Integer year;
+    private String imageUrl;
 
     public Game() {
     }
@@ -55,5 +65,23 @@ public class Game {
 
     public void setYear(Integer year) {
         this.year = year;
+    }
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    @Override
+    public String toString(){
+        return "Game{"+
+                "id = "+id+'\''+
+                "title = "+title+'\''+
+                "price = "+price+'\''+
+                "description = "+description+'\''+
+                "year = "+year+'\''+
+                "imageUrl = "+imageUrl+'\''+
+                "}";
     }
 }
