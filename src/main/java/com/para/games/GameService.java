@@ -12,7 +12,7 @@ public class GameService {
                         1,
                         "Marvel SNAP",
                         4.99,
-                        "best game eva",
+                        "worst game eva",
                         2022
                 )
         );
