@@ -60,6 +60,11 @@
 			<version>1.0.2</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- Spring Data JPA -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

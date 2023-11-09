@@ -17,6 +17,16 @@ public class Game implements Serializable {
     private Integer year;
     private String imageUrl;
 
+    public String getGameCode() {
+        return gameCode;
+    }
+
+    public void setGameCode(String gameCode) {
+        this.gameCode = gameCode;
+    }
+
+    private String gameCode;
+
     public Game() {
     }
     public Game(int id, String title, double price, String description, Integer year) {

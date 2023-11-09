@@ -22,7 +22,7 @@ public class PaRaApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(PaRaApplication.class, args);
 		//https://www.youtube.com/watch?v=Nv2DERaMx-4 1:33:00 ~
-		//https://youtu.be/Gx4iBLKLVHk?si=lc-nifXptBKD8thU&t=1567
+		//https://youtu.be/Gx4iBLKLVHk?si=lc-nifXptBKD8thU&t 32:00 ~
 		//Maraton for U <3
 	}
 	@Override
