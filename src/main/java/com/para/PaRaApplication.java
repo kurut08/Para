@@ -22,8 +22,8 @@ public class PaRaApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(PaRaApplication.class, args);
 		//https://www.youtube.com/watch?v=Nv2DERaMx-4 1:33:00 ~
-		//https://youtu.be/Gx4iBLKLVHk?si=lc-nifXptBKD8thU&t 1:09:00 ~ Angular wchodzi
-		//Maraton for U <3
+		//https://youtu.be/Gx4iBLKLVHk?si=lc-nifXptBKD8thU&t 1:19:00 ~ Skończyłem na tym // Skidway
+
 	}
 	@Override
 	public void run(final String... args){
