@@ -10,7 +10,7 @@ public class Game implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
-    private int id;
+    private Integer id;
     private String title;
     private double price;
     private String description;
@@ -29,15 +29,16 @@ public class Game implements Serializable {
 
     public Game() {
     }
-    public Game(int id, String title, double price, String description, Integer year) {
+    public Game(Integer id, String title, double price, String description, Integer year, String imageUrl) {
         this.id = id;
         this.title = title;
         this.price = price;
         this.description = description;
         this.year = year;
+        this.imageUrl = imageUrl;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

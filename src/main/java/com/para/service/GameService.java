@@ -3,6 +3,7 @@ package com.para.service;
 import com.para.exception.UserNotFoundException;
 import com.para.games.Game;
 import com.para.repo.GameRepo;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class GameService {
     private final GameRepo gameRepo;
 
@@ -28,21 +30,10 @@ public class GameService {
     public Game updateGame(Game game){
         return gameRepo.save(game);
     }
-    public void deleteGame(Long id){
+    public void deleteGame(Integer id){
         gameRepo.deleteGameById(id);
     }
-    public Game findGameById(Long id){
+    public Game findGameById(Integer id){
         return gameRepo.findGameById(id).orElseThrow(() -> new UserNotFoundException("User by id "+id+ " was not found"));
-    }
-    public List<Game> getGames(){
-        return List.of(
-                new Game(
-                        1,
-                        "Marvel SNAP",
-                        4.99,
-                        "best game eva",
-                        2022
-                )
-        );
     }
 }

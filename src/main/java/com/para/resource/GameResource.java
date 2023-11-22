@@ -1,4 +1,4 @@
-package com.para;
+package com.para.resource;
 
 import com.para.games.Game;
 import com.para.service.GameService;
@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
-@RequestMapping("/game")
+@RequestMapping("/games")
 public class GameResource {
     private final GameService gameService;
     public GameResource(GameService gameService) {
@@ -21,7 +22,7 @@ public class GameResource {
         return new ResponseEntity<>(games, HttpStatus.OK);
     }
     @GetMapping("/find/{id}")
-    public ResponseEntity<Game> getGameById(@PathVariable("id") Long id){
+    public ResponseEntity<Game> getGameById(@PathVariable("id") Integer id){
         Game game = gameService.findGameById(id);
         return new ResponseEntity<>(game, HttpStatus.OK);
     }
@@ -36,7 +37,7 @@ public class GameResource {
         return new ResponseEntity<>(updateGame, HttpStatus.OK);
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteGame(@PathVariable("id") Long id){
+    public ResponseEntity<?> deleteGame(@PathVariable("id") Integer id){
         gameService.deleteGame(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

@@ -13,12 +13,11 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @AllArgsConstructor
 
-
 public class WebSecurityConfig {
 
     private final AppUserService appUserService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
-
+/*
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception{
         //to configure .antMatchers(...)
@@ -27,7 +26,7 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain configure(AuthenticationManagerBuilder auth) throws Exception {
+    public SecurityFilterChain filterChainAuth(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(daoAuthenticationProvider());
         return (SecurityFilterChain) auth.build();
     }
@@ -38,6 +37,7 @@ public class WebSecurityConfig {
         provider.setUserDetailsService(appUserService);
         return provider;
     }
+*/
 }
 //https://www.youtube.com/watch?v=QwQuro7ekvc 40:00 ~Skidway
 //https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter
