@@ -1,35 +1,38 @@
 package com.para.games;
-
-import org.springframework.stereotype.Component;
-
-import java.io.Serializable;
+/*
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.annotation.Id;
 import javax.persistence.*;
+import java.io.Serializable;
 
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
 @Entity
 public class Game implements Serializable {
+    @SequenceGenerator(
+            name = "test_sequence_GAME",
+            sequenceName = "test_sequence_GAME",
+            allocationSize = 1
+    )
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "test_sequence_GAME"
+    )
     @Column(nullable = false, updatable = false)
     private Integer id;
     private String title;
-    private double price;
+    private Double price;
     private String description;
     private Integer year;
     private String imageUrl;
 
-    public String getGameCode() {
-        return gameCode;
-    }
-
-    public void setGameCode(String gameCode) {
-        this.gameCode = gameCode;
-    }
-
-    private String gameCode;
-
-    public Game() {
-    }
-    public Game(Integer id, String title, double price, String description, Integer year, String imageUrl) {
+    public Game(Integer id, String title, Double price, String description, Integer year, String imageUrl) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -54,7 +57,7 @@ public class Game implements Serializable {
         this.title = title;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
@@ -95,4 +98,6 @@ public class Game implements Serializable {
                 "imageUrl = "+imageUrl+'\''+
                 "}";
     }
+
 }
+*/

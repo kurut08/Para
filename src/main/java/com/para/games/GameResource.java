@@ -1,7 +1,7 @@
-package com.para.resource;
-
+package com.para.games;
+/*
 import com.para.games.Game;
-import com.para.service.GameService;
+import com.para.games.GameService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -43,3 +43,4 @@ public class GameResource {
     }
 }
 
+*/
