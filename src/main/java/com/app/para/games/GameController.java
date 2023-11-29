@@ -28,7 +28,7 @@ public class GameController {
     }
 
     @GetMapping("/available_game")
-    public ModelAndView getAllBook() {
+    public ModelAndView getAllGames() {
         List<Game> list= gameService.getAllGames();
 //		ModelAndView m=new ModelAndView();
 //		m.setViewName("bookList");
@@ -37,7 +37,7 @@ public class GameController {
     }
 
     @PostMapping("/save")
-    public String addBook(@ModelAttribute Game game) {
+    public String addGame(@ModelAttribute Game game) {
         gameService.save(game);
         return "redirect:/available_game";
     }
