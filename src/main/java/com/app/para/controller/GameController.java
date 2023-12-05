@@ -1,5 +1,9 @@
-package com.app.para.games;
+package com.app.para.controller;
 
+import com.app.para.models.Game;
+import com.app.para.models.GameUser;
+import com.app.para.services.GameService;
+import com.app.para.services.GameServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

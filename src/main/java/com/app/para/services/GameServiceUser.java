@@ -1,5 +1,8 @@
-package com.app.para.games;
+package com.app.para.services;
 import java.util.List;
+
+import com.app.para.repository.GameRepoUser;
+import com.app.para.models.GameUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

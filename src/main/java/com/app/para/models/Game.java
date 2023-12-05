@@ -1,31 +1,32 @@
-package com.app.para.games;
+package com.app.para.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-@Table(name="MyGames")
-public class GameUser {
+public class Game {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private String title;
     private String description;
-
-    private String imageUrl;
     private String price;
-    public GameUser() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-    public GameUser(int id, String title, String description, String imageUrl, String price) {
+    private String imageUrl;
+
+    public Game(int id, String title, String description, String price, String imageUrl) {
         super();
         this.id = id;
         this.title = title;
         this.description = description;
-        this.imageUrl = imageUrl;
         this.price = price;
+        this.imageUrl = imageUrl;
+    }
+    public Game() {
+        super();
+        // TODO Auto-generated constructor stub
     }
     public int getId() {
         return id;
@@ -48,11 +49,11 @@ public class GameUser {
     public String getPrice() {
         return price;
     }
-    public String getImageUrl() {
-        return imageUrl;
-    }
     public void setPrice(String price) {
         this.price = price;
+    }
+    public String getImageUrl() {
+        return imageUrl;
     }
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
