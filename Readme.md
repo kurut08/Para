@@ -14,3 +14,8 @@ Para is a web app which contains "store pages" of games, with a button to launch
 ```
  - Open project in IntelliJ
  - Launch Docker/docker-compose.yml and wait until docker container is up and running.
+
+## Docker container after build is finished should consist of:
+ - db
+ - maildev
+ - pgadmin
