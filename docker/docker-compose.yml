@@ -21,7 +21,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     restart: always
     volumes:
-      - ./servers.json:/pgadmin4/servers.json
+      - ./backend/servers.json:/pgadmin4/servers.json
 
   maildev:
     image: maildev/maildev:2.1.0

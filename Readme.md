@@ -4,18 +4,19 @@ Para is a web app which contains "store pages" of games, with a button to launch
 ## How to launch Para?
 
 ### Prerequisited
-- Docker Desktop
-- IntelliJ
+- Docker Desktop;
+- IntelliJ.
 
 ### Launching the actual application
 - Clone the repository using 
 ```
 - git clone https://github.com/kurut08/Para.git
 ```
- - Open project in IntelliJ
+ - Open project in IntelliJ;
+ - If you cannot see any folders in the Project tab, go to Maven tab and press a refresh;
  - Launch Docker/docker-compose.yml and wait until docker container is up and running.
 
 ## Docker container after build is finished should consist of:
- - db
- - maildev
- - pgadmin
+ - db;
+ - maildev;
+ - pgadmin.
