@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Huh?" />
+    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Huh?v2">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/ParaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/ParaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/email/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/email/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/models/ApplicationUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/models/ApplicationUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/models/RegistrationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/models/RegistrationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/repository/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/src/main/java/com/app/para/services/UserService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +52,6 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -153,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702481318938</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Huh?v2">
+      <created>1702482112295</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702482112296</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +196,21 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -187,6 +220,7 @@
     <MESSAGE value="Added react, stopped at para-front/api/axiosConfig.js" />
     <MESSAGE value="Fixed structue" />
     <MESSAGE value="Huh?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Huh?" />
+    <MESSAGE value="Huh?v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Huh?v2" />
   </component>
 </project>

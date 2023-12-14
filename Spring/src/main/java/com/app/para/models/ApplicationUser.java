@@ -4,31 +4,27 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
-
 @Entity
 @Table(name="users")
+@NamedQuery(name = ApplicationUser.FIND_BY_VERIFICATION_CODE, query = "SELECT u FROM ApplicationUser u WHERE u.verificationCode = :code")
 public class ApplicationUser implements UserDetails{
+
+    public static final String FIND_BY_VERIFICATION_CODE = "ApplicationUser.findByVerificationCode";
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer userId;
     @Column(unique=true)
+    private String email;
     private String username;
     private String password;
-
+    @Column(name = "verification_code", length = 64)
+    private String verificationCode;
+    private boolean enabled;
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(
             name="user_role_junction",
@@ -43,9 +39,10 @@ public class ApplicationUser implements UserDetails{
     }
 
 
-    public ApplicationUser(Integer userId, String username, String password, Set<Role> authorities) {
+    public ApplicationUser(Integer userId, String email, String username, String password, Set<Role> authorities) {
         super();
         this.userId = userId;
+        this.email = email;
         this.username = username;
         this.password = password;
         this.authorities = authorities;
@@ -62,7 +59,6 @@ public class ApplicationUser implements UserDetails{
     public void setAuthorities(Set<Role> authorities) {
         this.authorities = authorities;
     }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         // TODO Auto-generated method stub
@@ -72,7 +68,7 @@ public class ApplicationUser implements UserDetails{
     @Override
     public String getPassword() {
         // TODO Auto-generated method stub
-        return this.password;
+        return password;
     }
 
     public void setPassword(String password) {
@@ -110,8 +106,22 @@ public class ApplicationUser implements UserDetails{
 
     @Override
     public boolean isEnabled() {
-        // TODO Auto-generated method stub
         return true;
     }
 
+    public void setEnabled(boolean b) {
+        this.enabled=b;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setVerificationCode(String randomCode) {
+        this.verificationCode=randomCode;
+    }
+
+    public String getVerificationCode() {
+        return this.verificationCode;
+    }
 }

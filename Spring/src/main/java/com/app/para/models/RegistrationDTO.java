@@ -1,15 +1,42 @@
 package com.app.para.models;
 
+import jakarta.persistence.Column;
+
 public class RegistrationDTO {
+    private String email;
     private String username;
     private String password;
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getVerificationCode() {
+        return verificationCode;
+    }
+
+    public void setVerificationCode(String verificationCode) {
+        this.verificationCode = verificationCode;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    private String verificationCode;
+    private boolean enabled;
 
     public RegistrationDTO(){
         super();
     }
 
-    public RegistrationDTO(String username, String password){
+    public RegistrationDTO(String email, String username, String password){
         super();
+        this.email = email;
         this.username = username;
         this.password = password;
     }
@@ -32,5 +59,9 @@ public class RegistrationDTO {
 
     public String toString(){
         return "Registration info: username: " + this.username + " password: " + this.password;
+    }
+
+    public String getEmail() {
+        return this.email;
     }
 }
