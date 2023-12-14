@@ -8,6 +8,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="demo" />
       </profile>
       <profile name="Annotation profile for PaRa" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
