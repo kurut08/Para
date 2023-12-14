@@ -3,6 +3,7 @@ version: '3.1'
 services:
 
   db:
+    container_name: PostgreSQL
     image: postgres:16.0
     ports:
       - "5432:5432"
@@ -11,6 +12,7 @@ services:
       POSTGRES_PASSWORD: admin
 
   pgadmin:
+    container_name: pgAdmin
     image: dpage/pgadmin4:7.8
     depends_on:
       - db
@@ -24,7 +26,16 @@ services:
       - ./backend/servers.json:/pgadmin4/servers.json
 
   maildev:
+    container_name: MailDev
     image: maildev/maildev:2.1.0
     ports:
       - "1080:1080"
       - "1025:1025"
+
+  react:
+    container_name: React
+    build:
+      dockerfile: ../docker/frontend/Dockerfile
+      context: ../para-front/
+    ports:
+      - "3000:3000"
