@@ -36,6 +36,7 @@ services:
     container_name: React
     build:
       dockerfile: ../docker/frontend/Dockerfile
-      context: ../para-front/
+    volumes:
+      - ../para-front:/usr/src/app/
     ports:
       - "3000:3000"
