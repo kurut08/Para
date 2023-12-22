@@ -40,6 +40,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Para" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="para" options="-parameters" />
     </option>
   </component>

@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Expanded docker with React">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Fixed directories o(*￣▽￣*)ブ">
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Register.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Verify.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/LoginMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/AuthService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +34,8 @@
         <option value="Enum" />
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,33 +67,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/Java/AFAFI - GIT",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Java/AFAFI - GIT&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\Java\Para\docker\backend" />
       <recent name="C:\Users\User\Desktop\Java\Para\Spring" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker.react: Compose Deployment">
+  <component name="RunManager" selected="Application.ParaApplication">
     <configuration name="ParaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.app.para.ParaApplication" />
       <module name="demo" />
@@ -118,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker.react: Compose Deployment" />
         <item itemvalue="Application.ParaApplication" />
+        <item itemvalue="Docker.docker.react: Compose Deployment" />
         <item itemvalue="Application.ParaApplication" />
       </list>
     </recent_temporary>
@@ -214,21 +224,6 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -246,6 +241,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

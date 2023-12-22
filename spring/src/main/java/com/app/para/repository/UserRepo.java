@@ -13,4 +13,6 @@ public interface UserRepo extends JpaRepository<ApplicationUser, Integer> {
     Optional<ApplicationUser> findByUsername(String username);
    @Query(name = ApplicationUser.FIND_BY_VERIFICATION_CODE)
     ApplicationUser findByVerificationCode(@Param("code") String code);
+    Optional<ApplicationUser> findOneByUsernameAndPassword(String username, String password);
+
 }

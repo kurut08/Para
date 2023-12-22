@@ -27,7 +27,7 @@ public class GameController {
     }
 
     @GetMapping("/game_add")
-    public String bookAdd() {
+    public String gameAdd() {
         return "gameadd";
     }
 

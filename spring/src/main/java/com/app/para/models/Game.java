@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.List;
+
 @Entity
 public class Game {
 
@@ -15,14 +17,17 @@ public class Game {
     private String description;
     private String price;
     private String imageUrl;
+    private List<String> genres;
 
-    public Game(int id, String title, String description, String price, String imageUrl) {
+    public Game(int id, String title, String description, String price, String imageUrl, List<String> genres) {
         super();
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.imageUrl = imageUrl;
+        this.genres = genres;
+
     }
     public Game() {
         super();
@@ -57,5 +62,11 @@ public class Game {
     }
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+    public List<String> getGenres() {
+        return genres;
+    }
+    public void setGenres(List<String> genres) {
+        this.genres = genres;
     }
 }
