@@ -4,21 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Fixed directories o(*￣▽￣*)ブ">
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Register.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Verify.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/LoginMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added React Register/Verify/Login/Home Page">
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Edit.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Library.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameControllerUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702573549672</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added React Register/Verify/Login/Home Page">
+      <created>1703269935043</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703269935043</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +281,7 @@
     <MESSAGE value="Mails are working now (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" />
     <MESSAGE value="Mails are working now (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" />
     <MESSAGE value="Expanded docker with React" />
-    <option name="LAST_COMMIT_MESSAGE" value="Expanded docker with React" />
+    <MESSAGE value="Added React Register/Verify/Login/Home Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added React Register/Verify/Login/Home Page" />
   </component>
 </project>

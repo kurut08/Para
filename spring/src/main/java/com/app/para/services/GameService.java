@@ -1,5 +1,6 @@
 package com.app.para.services;
 import java.util.List;
+import java.util.Optional;
 
 import com.app.para.repository.GameRepo;
 import com.app.para.models.Game;
@@ -20,10 +21,10 @@ public class GameService {
         return gameRepo.findAll();
     }
 
-    public Game getGameById(int id) {
-        return gameRepo.findById(id).get();
+    public Optional<Game> findGameById(String id) {
+        return gameRepo.findGameById(id);
     }
-    public void deleteById(int id) {
+    public void deleteById(String id) {
         gameRepo.deleteById(id);
     }
 }
