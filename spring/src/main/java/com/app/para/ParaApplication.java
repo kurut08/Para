@@ -39,7 +39,7 @@ public class ParaApplication {
 			Set<Role> roles = new HashSet<>();
 			roles.add(adminRole);
 
-			ApplicationUser admin = new ApplicationUser(1, "admin@admin.com","admin", passwordEncode.encode("password"), roles);
+			ApplicationUser admin = new ApplicationUser(1, "admin@admin.com","admin", passwordEncode.encode("admin"), roles);
 
 			userRepository.save(admin);
 		};

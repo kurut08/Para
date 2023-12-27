@@ -31,7 +31,7 @@ function Register() {
 
                     <form>
                         <div class="form-group">
-                            <label>Username</label>
+                            <label>Username:</label>
                             <input type="text"  class="form-control" id="username" placeholder="Enter your Username"
 
                                    value={username}

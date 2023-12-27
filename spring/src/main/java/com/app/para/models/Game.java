@@ -27,7 +27,6 @@ public class Game {
         this.price = price;
         this.imageUrl = imageUrl;
         this.genres = genres;
-
     }
     public Game() {
         super();

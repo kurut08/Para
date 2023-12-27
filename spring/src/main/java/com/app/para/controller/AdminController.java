@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/shop")
+@RequestMapping("/admin")
 @CrossOrigin("*")
 public class AdminController {
     @Autowired
@@ -43,17 +43,11 @@ public class AdminController {
         gameService.deleteById(id);
         return "deleted";
     }
-    @PostMapping("/save")
-    public String addGame(@ModelAttribute Game game) {
+    @PostMapping("/addgame")
+    public ResponseEntity<String> addGame(@RequestBody Game game){
         gameService.save(game);
-        return "redirect:/available_game";
+        return new ResponseEntity<String>("Added game", HttpStatus.OK);
     }
-    @GetMapping("/addgame")
-    public String gameAdd() {
-        return "gameadd";
-    }
-
-
     @GetMapping("/mygames")
     public String getMyGames(Model model)
     {

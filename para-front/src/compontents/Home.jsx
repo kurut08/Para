@@ -1,8 +1,8 @@
-function Home(){
+import Item from './item/Item';
+
+const Home = ({games}) => {
     return(
-        <div>
-            <h1>Java Silicon Valley nadchodzi!</h1>
-        </div>
+        <Item games = {games}/>
     )
 }
 export default Home;
