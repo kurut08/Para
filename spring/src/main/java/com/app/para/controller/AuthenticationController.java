@@ -17,7 +17,7 @@ import java.io.UnsupportedEncodingException;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 public class AuthenticationController {
 
     @Autowired
@@ -52,4 +52,5 @@ public class AuthenticationController {
             return "verify_fail";
         }
     }
+
 }

@@ -37,7 +37,7 @@ services:
     build:
       dockerfile: ../docker/frontend/Dockerfile
     volumes:
-      - ../para-front:/usr/src/app/
+      - ../para-front:/src/
     ports:
       - "3000:3000"
     environment:

@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 public class AdminController {
     @Autowired
     private GameService gameService;
@@ -24,11 +24,11 @@ public class AdminController {
     @Autowired
     private GameServiceUser gameServiceUser;
 
-    @GetMapping
+    @GetMapping("/shop")
     public ResponseEntity<List<Game>> getGames() {
-        return new ResponseEntity<List<Game>>(gameService.getAllGames(), HttpStatus.OK);
+        return new ResponseEntity<>(gameService.getAllGames(), HttpStatus.OK);
     }
-    @GetMapping("/{gameId}")
+    @GetMapping("/shop/{gameId}")
     public ResponseEntity<Optional<Game>> getSingleGame(@PathVariable String gameId){
         return new ResponseEntity<Optional<Game>>(gameService.findGameById(gameId), HttpStatus.OK);
     }
@@ -45,8 +45,8 @@ public class AdminController {
     }
     @PostMapping("/addgame")
     public ResponseEntity<String> addGame(@RequestBody Game game){
-        gameService.save(game);
-        return new ResponseEntity<String>("Added game", HttpStatus.OK);
+        gameService.addGame(game.getTitle(), game.getDescription(), game.getImageUrl(), game.getPrice(), game.getGenres());
+        return new ResponseEntity<>("Added game", HttpStatus.OK);
     }
     @GetMapping("/mygames")
     public String getMyGames(Model model)
