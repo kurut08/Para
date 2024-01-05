@@ -43,3 +43,4 @@ public class UserController {
         return "myGames";
     }
 }
+// TODO DELETE THIS FILE AFTER MOVING THESE FUNCS TO AuthenticationController.java
