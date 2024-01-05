@@ -43,11 +43,7 @@ public class AdminController {
         gameService.deleteById(id);
         return "deleted";
     }
-    @PostMapping("/addgame")
-    public ResponseEntity<String> addGame(@RequestBody Game game){
-        gameService.addGame(game.getTitle(), game.getDescription(), game.getImageUrl(), game.getPrice(), game.getGenres());
-        return new ResponseEntity<>("Added game", HttpStatus.OK);
-    }
+
     @GetMapping("/mygames")
     public String getMyGames(Model model)
     {
@@ -56,3 +52,4 @@ public class AdminController {
         return "myGames";
     }
 }
+// TODO DELETE THIS FILE AFTER MOVING THESE FUNCS TO AuthenticationController.java

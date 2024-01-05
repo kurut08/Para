@@ -17,7 +17,7 @@ public class GameService {
     @Autowired
     private GameRepo gameRepo;
 
-    public Game addGame(String title, String description, String imageUrl, String price, List<String> genres) {
+    public Game addGame(String title, String description, String imageUrl, String price, String genres) {
         return gameRepo.save(new Game(0, title, description, price, imageUrl, genres));
     }
 

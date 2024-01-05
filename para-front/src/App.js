@@ -22,7 +22,7 @@ function App() {
               <Route path="/" element= { <Home/>} />//NON-LOGIN
               <Route path="/register" element= { <Register/>} />
               <Route path="/login" element= { <Login/>} />
-              <Route path="/shop" element={ <Shop />} />//USER
+              <Route path="/shop" exact element={ <Shop/>} />//USER
               <Route path="/lib" element={ <Library/>} />//USER
               <Route path="/profile" element={ <Profile/>} />//USER
               <Route path="/edit" element={ <Edit/>} /> //ADMIN

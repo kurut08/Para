@@ -12,7 +12,7 @@ function Edit(){
     async function addGame(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/admin/addgame", {
+            await axios.post("http://localhost:8080/auth/addgame", {
                 title: title,
                 description: description,
                 price: price,
@@ -23,16 +23,19 @@ function Edit(){
                 alert("Added game");
             }, fail => {
                 console.error(fail); // Error!
+                alert("KEK");
             });
         }
         catch (err) {
+            console.log(err);
             alert(err);
         }
     }
+    
     async function delGame(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/admin/delgame", {
+            await axios.post("http://localhost:8080/auth/delgame", {
                 title: title,
             }).then((res) =>
             {
@@ -47,19 +50,19 @@ function Edit(){
     }
     return (
         <div>
-            <div class="container">
-                <div class="row">
+            <div className="container">
+                <div className="row">
                     <h2>Add Game</h2>
                     <hr/>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-6">
+                <div className="row">
+                    <div className="col-sm-6">
 
                         <form>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label>Title</label>
-                                <input type="text"  class="form-control" id="title" placeholder="Enter title"
+                                <input type="text"  className="form-control" id="title" placeholder="Enter title"
                                        value={title}
                                        onChange={(event) => {
                                            setTitle(event.target.value);
@@ -102,7 +105,7 @@ function Edit(){
                                        }}
                                 />
                             </div>
-                            <button type="submit" class="btn btn-primary" onClick={addGame} >Add</button>
+                            <button type="submit" className="btn btn-primary" onClick={addGame} >Add</button>
                         </form>
                         <h2>Delete Game</h2>
                         <form>

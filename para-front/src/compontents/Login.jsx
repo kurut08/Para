@@ -47,19 +47,19 @@ function Login() {
 
     return (
         <div>
-            <div class="container">
-                <div class="row">
+            <div className="container">
+                <div className="row">
                     <h2>Login</h2>
                     <hr/>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-6">
+                <div className="row">
+                    <div className="col-sm-6">
 
                         <form>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label>Username</label>
-                                <input type="email"  class="form-control" id="username" placeholder="Enter Username"
+                                <input type="email"  className="form-control" id="username" placeholder="Enter Username"
 
                                        value={username}
                                        onChange={(event) => {
@@ -70,9 +70,9 @@ function Login() {
 
                             </div>
 
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label>password</label>
-                                <input type="password"  class="form-control" id="password" placeholder="Enter Password"
+                                <input type="password"  className="form-control" id="password" placeholder="Enter Password"
 
                                        value={password}
                                        onChange={(event) => {
@@ -81,7 +81,7 @@ function Login() {
 
                                 />
                             </div>
-                            <button type="submit" class="btn btn-primary" onClick={login} >Login</button>
+                            <button type="submit" className="btn btn-primary" onClick={login} >Login</button>
                         </form>
 
                     </div>
