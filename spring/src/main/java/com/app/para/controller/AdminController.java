@@ -1,7 +1,7 @@
 package com.app.para.controller;
 
 import com.app.para.models.Game;
-import com.app.para.models.GameUser;
+import com.app.para.models.Game_Library;
 import com.app.para.services.GameService;
 import com.app.para.services.GameServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Optional;
@@ -47,7 +46,7 @@ public class AdminController {
     @GetMapping("/mygames")
     public String getMyGames(Model model)
     {
-        List<GameUser>list= gameServiceUser.getAllMyGames();
+        List<Game_Library>list= gameServiceUser.getAllMyGames();
         model.addAttribute("game",list);
         return "myGames";
     }

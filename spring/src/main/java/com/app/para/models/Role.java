@@ -10,14 +10,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="roles")
+@Table(name="role")
 public class Role implements GrantedAuthority {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="role_id")
     private Integer roleId;
-
+    @Column(length = 64, unique = true)
     private String authority;
 
     public Role(){

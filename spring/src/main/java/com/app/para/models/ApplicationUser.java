@@ -20,9 +20,10 @@ public class ApplicationUser implements UserDetails{
     private Integer userId;
     @Column(unique=true)
     private String email;
+    @Column(unique = true)
     private String username;
     private String password;
-    @Column(name = "verification_code", length = 64)
+    @Column(name = "verification_code", length = 64, unique = true)
     private String verificationCode;
     private boolean enabled;
     @ManyToMany(fetch=FetchType.EAGER)
@@ -110,6 +111,8 @@ public class ApplicationUser implements UserDetails{
     public String getEmail() {
         return email;
     }
+
+    public void setEmail(String email) {this.email = email;}
 
     public void setVerificationCode(String randomCode) {
         this.verificationCode=randomCode;

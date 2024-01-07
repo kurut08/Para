@@ -1,7 +1,7 @@
 package com.app.para.controller;
 
 import com.app.para.models.Game;
-import com.app.para.models.GameUser;
+import com.app.para.models.Game_Library;
 import com.app.para.services.GameService;
 import com.app.para.services.GameServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class UserController {
     }
     @GetMapping("/mygames")
     public String getMyGames(Model model) {
-        List<GameUser>list= gameServiceUser.getAllMyGames();
+        List<Game_Library>list= gameServiceUser.getAllMyGames();
         model.addAttribute("game",list);
         return "myGames";
     }

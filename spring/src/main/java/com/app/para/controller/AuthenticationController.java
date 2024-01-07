@@ -61,7 +61,7 @@ public class AuthenticationController {
     }
     @PostMapping("/addgame")
     public ResponseEntity<String> addGame(@RequestBody Game game){
-        gameService.addGame(game.getTitle(), game.getDescription(), game.getImageUrl(), game.getPrice(), game.getGenres());
+        gameService.addGame(game.getTitle(), game.getDescription(), game.getPrice(), game.getGenre());
         return new ResponseEntity<>("Added game", HttpStatus.OK);
     }
     @GetMapping("/shop")
@@ -86,7 +86,7 @@ public class AuthenticationController {
     @GetMapping("/mygames")
     public String getMyGames(Model model)
     {
-        List<GameUser>list= gameServiceUser.getAllMyGames();
+        List<Game_Library>list= gameServiceUser.getAllMyGames();
         model.addAttribute("game",list);
         return "myGames";
     }
