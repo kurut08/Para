@@ -1,15 +1,16 @@
 package com.app.para.services;
 import java.util.List;
 
-import com.app.para.repository.GameRepoUser;
+import com.app.para.repository.GameLibraryRepo;
 import com.app.para.models.Game_Library;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GameServiceUser {
+public class GameLibraryService
+{
     @Autowired
-    private GameRepoUser gameRepoUser;
+    private GameLibraryRepo gameRepoUser;
 
     public void saveMyGames(Game_Library game) {
         gameRepoUser.save(game);

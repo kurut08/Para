@@ -17,11 +17,13 @@ public class ApplicationUser implements UserDetails{
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "user_id")
     private Integer userId;
-    @Column(unique=true)
+    @Column(unique=true, nullable = false)
     private String email;
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String username;
+    @Column(nullable = false)
     private String password;
     @Column(name = "verification_code", length = 64, unique = true)
     private String verificationCode;

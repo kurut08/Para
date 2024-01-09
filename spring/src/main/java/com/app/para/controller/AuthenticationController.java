@@ -2,7 +2,7 @@ package com.app.para.controller;
 
 import com.app.para.models.*;
 import com.app.para.services.GameService;
-import com.app.para.services.GameServiceUser;
+import com.app.para.services.GameLibraryService;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class AuthenticationController {
     @Autowired
     private GameService gameService;
     @Autowired
-    private GameServiceUser gameServiceUser;
+    private GameLibraryService gameLibraryService;
     @PostMapping("/register_email")
     public String processRegister(@RequestBody RegistrationDTO body, HttpServletRequest request) throws UnsupportedEncodingException, MessagingException {
         authenticationService.register(body.getEmail(), body.getUsername(), body.getPassword(), getSiteURL(request));
@@ -86,7 +86,7 @@ public class AuthenticationController {
     @GetMapping("/mygames")
     public String getMyGames(Model model)
     {
-        List<Game_Library>list= gameServiceUser.getAllMyGames();
+        List<Game_Library>list= gameLibraryService.getAllMyGames();
         model.addAttribute("game",list);
         return "myGames";
     }
