@@ -24,7 +24,7 @@
     background-color: var(--main_background);
     display: flex;
     flex-direction: row;
-    height: 85vh;
+    height: 90vh;
 }
 
 .section-container {

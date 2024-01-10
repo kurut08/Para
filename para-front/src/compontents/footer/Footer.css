@@ -1,8 +1,9 @@
 .footer {
-    position: fixed;
-    height: auto;
+    position: absolute;
+    height: 7%;
     width: 100%;
     color: #ee0808;
+    margin-top: auto;
     background-color: var(--footer_background);
 }
 .footer-text {
