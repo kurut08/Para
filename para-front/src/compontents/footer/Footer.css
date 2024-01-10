@@ -1,0 +1,11 @@
+.footer {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    color: #ee0808;
+    background-color: var(--footer_background);
+}
+.footer-text {
+    text-align: right; /* Align the text to the right */
+    padding: 1%;
+}

@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root {
+  --header_background: #999;
+  --main_background: #FFF;
+  --section_background: #AAA;
+  --footer_background: #999;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
+  --primary-text-color: #0a0a0a;
+}
+
+[data-theme="dark"] {
+  --header_background: #2c3e50;
+  --main_background: #34495e;
+  --section_background: #2e4053;
+  --footer_background: #2c3e50;
+  --toggle-bg: #283452;
+  --toggle-fg: #00a6ff;
+  --primary-text-color: #f6f6f6;
+}
+* {
+  transition: all 0.3 ease-in-out;
+}

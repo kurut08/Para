@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Small changes">
+      <change afterPath="$PROJECT_DIR$/.vs/Para/FileContentIndex/94704033-da58-4f02-b738-4ccd7a8f3e9e.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/Para/FileContentIndex/read.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/Para/v17/.wsuo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/footer/Footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/footer/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/toggle/Toggle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/toggle/Toggle.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/api/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/api/axiosConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Edit.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
         <option value="Interface" />
         <option value="Dockerfile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -91,6 +93,7 @@
     &quot;git-widget-placeholder&quot;: &quot;front-test&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Java/AFAFI - GIT&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -103,6 +106,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSPX&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -190,6 +198,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+        <option value="jdk-21.0.1-corretto-21.0.1-f644763e9732-eed86825" />
       </set>
     </attachedChunks>
   </component>
@@ -211,6 +220,8 @@
       <workItem from="1703882670355" duration="315000" />
       <workItem from="1704394917970" duration="6061000" />
       <workItem from="1704480884024" duration="985000" />
+      <workItem from="1704881796663" duration="4857000" />
+      <workItem from="1704887987355" duration="13747000" />
     </task>
     <task id="LOCAL-00001" summary="working login demo">
       <created>1700759450337</created>
