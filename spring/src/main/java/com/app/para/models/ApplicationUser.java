@@ -27,6 +27,8 @@ public class ApplicationUser implements UserDetails{
     private String password;
     @Column(name = "verification_code", length = 64, unique = true)
     private String verificationCode;
+    @Column()
+    private  String avatarUrl;
     private boolean enabled;
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(
@@ -40,8 +42,6 @@ public class ApplicationUser implements UserDetails{
         super();
         authorities = new HashSet<>();
     }
-
-
     public ApplicationUser(Integer userId, String email, String username, String password, Set<Role> authorities) {
         super();
         this.userId = userId;
@@ -49,6 +49,15 @@ public class ApplicationUser implements UserDetails{
         this.username = username;
         this.password = password;
         this.authorities = authorities;
+    }
+    public ApplicationUser(Integer userId, String email, String username, String password, Set<Role> authorities, String avatarUrl) {
+        super();
+        this.userId = userId;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.authorities = authorities;
+        this.avatarUrl = avatarUrl;
     }
 
     public Integer getUserId() {
@@ -122,5 +131,17 @@ public class ApplicationUser implements UserDetails{
 
     public String getVerificationCode() {
         return this.verificationCode;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 }
