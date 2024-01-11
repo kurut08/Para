@@ -40,6 +40,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebMvc
 public class SecurityConfiguration {
 
+
     private final RSAKeyProperties keys;
 
     public SecurityConfiguration(RSAKeyProperties keys){
@@ -73,14 +74,15 @@ public class SecurityConfiguration {
                 })
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/auth/**").permitAll();
-                    auth.requestMatchers("/admin/**").hasRole("ADMIN");
-                    auth.requestMatchers("/user/**").hasAnyRole("ADMIN", "USER");
+                    auth.requestMatchers("/auth/register_email/**").permitAll();
+                    auth.requestMatchers("/auth/verify/**").permitAll();
+                    auth.requestMatchers("/auth/login/**").permitAll();
+                    auth.requestMatchers("/auth/shop/**").permitAll();
+                    auth.requestMatchers("/auth/admin/**").hasRole("ADMIN");
+                    auth.requestMatchers("/auth/user/**").hasAnyRole("ADMIN", "USER");
                     auth.anyRequest().authenticated();
                     // TODO MODIFY requestMatchers TO GIVEN FUNCTIONS IN CONTROLLER
                 });
-
-
         http.oauth2ResourceServer()
                 .jwt()
                 .jwtAuthenticationConverter(jwtAuthenticationConverter());

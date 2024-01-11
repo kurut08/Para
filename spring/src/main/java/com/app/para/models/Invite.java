@@ -1,16 +1,14 @@
 package com.app.para.models;
 
 import jakarta.persistence.*;
-
+@Entity
 public class Invite {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int inviteId;
-    @OneToOne
+    private int id;
     @JoinColumn(name = "user_from", referencedColumnName = "user_id")
     @Column(nullable = false)
     private int userFrom;
-    @OneToOne
     @JoinColumn(name = "user_to", referencedColumnName = "user_id")
     @Column(nullable = false)
     private int userTo;
@@ -18,7 +16,7 @@ public class Invite {
 
     public Invite(int inviteId, int userFrom, int userTo) {
         super();
-        this.inviteId = inviteId;
+        this.id = inviteId;
         this.userFrom = userFrom;
         this.userTo = userTo;
     }
@@ -28,11 +26,11 @@ public class Invite {
     }
 
     public int getInviteId() {
-        return inviteId;
+        return id;
     }
 
     public void setInviteId(int inviteId) {
-        this.inviteId = inviteId;
+        this.id = inviteId;
     }
 
     public int getUserFrom() {

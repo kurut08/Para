@@ -7,12 +7,10 @@ public class Friends {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int friendListId;
-    @OneToOne
+    private int id;
     @JoinColumn(name = "owner", referencedColumnName = "user_id")
     @Column(nullable = false)
     private int owner;
-    @OneToOne
     @JoinColumn(name = "friend", referencedColumnName = "user_id")
     @Column(nullable = false)
     private int friend;
@@ -20,7 +18,7 @@ public class Friends {
 
     public Friends(int friendListId, int owner, int friend) {
         super();
-        this.friendListId = friendListId;
+        this.id = friendListId;
         this.owner = owner;
         this.friend = friend;
     }
@@ -30,11 +28,11 @@ public class Friends {
     }
 
     public int getFriendListId() {
-        return friendListId;
+        return id;
     }
 
     public void setFriendListId(int friendListId) {
-        this.friendListId = friendListId;
+        this.id = friendListId;
     }
 
     public int getOwner() {

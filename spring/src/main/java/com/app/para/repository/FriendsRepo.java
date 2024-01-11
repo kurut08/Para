@@ -10,5 +10,5 @@ import java.util.Optional;
 @Repository
 public interface FriendsRepo extends JpaRepository<Friends, Integer>
 {
-    Optional<Friends> findFriendsById(Integer id);
+    Optional<Friends> findFriendsById(Integer friendListId);
 }
