@@ -6,7 +6,6 @@ function Edit(){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
-    const [imageUrl, setImageUrl] = useState("");
     const [genres, setGenres] = useState("");
 
     async function addGame(event) {
@@ -16,7 +15,6 @@ function Edit(){
                 title: title,
                 description: description,
                 price: price,
-                imageUrl: imageUrl,
                 genres: genres
             }).then((res) =>
             {
@@ -35,7 +33,7 @@ function Edit(){
     async function delGame(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/auth/delgame", {
+            await axios.post("http://localhost:8080/auth/admin/delgame", {
                 title: title,
             }).then((res) =>
             {
@@ -84,15 +82,6 @@ function Edit(){
                                        value={price}
                                        onChange={(event) => {
                                            setPrice(event.target.value);
-                                       }}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label>Image URL</label>
-                                <input type="url" className="form-control" id="imageUrl" placeholder="Enter URL"
-                                       value={imageUrl}
-                                       onChange={(event) => {
-                                           setImageUrl(event.target.value);
                                        }}
                                 />
                             </div>
