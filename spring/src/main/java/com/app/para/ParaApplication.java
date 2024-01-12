@@ -10,6 +10,7 @@ package com.app.para;
 
 import com.app.para.models.Game_Media;
 import com.app.para.repository.GameMediaRepo;
+import com.app.para.repository.GameRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.HashSet;
@@ -32,10 +33,10 @@ public class ParaApplication {
 		SpringApplication.run(ParaApplication.class, args);
 	}
 	@Bean
-	CommandLineRunner run(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameMediaRepo gameMediaRepo){
+	CommandLineRunner run(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo, GameMediaRepo gameMediaRepo){
 		return args ->{
 			SampleDataFiller sdf = new SampleDataFiller();
-			sdf.FillDatabase(roleRepository, userRepository, passwordEncode, gameMediaRepo);
+			sdf.FillDatabase(roleRepository, userRepository, passwordEncode, gameRepo, gameMediaRepo);
 		};
 	}
 }

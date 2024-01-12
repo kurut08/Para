@@ -10,6 +10,7 @@ public class Game {
     private int id;
     @Column(unique = true, nullable = false)
     private String title;
+    @Column(columnDefinition = "TEXT")
     private String description;
     @Column(nullable = false)
     private Float price;
@@ -28,6 +29,17 @@ public class Game {
         this.price = price;
         this.genre = genre;
     }
+
+    public Game(int id, String title, String description, Float price, String genre, Game_Media gameMedia) {
+        super();
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.genre = genre;
+        this.game_media = gameMedia;
+    }
+
     public Game() {
         super();
         // TODO Auto-generated constructor stub
