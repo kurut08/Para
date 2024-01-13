@@ -10,6 +10,7 @@ package com.app.para;
 
 import com.app.para.models.Game_Media;
 import com.app.para.repository.GameMediaRepo;
+import com.app.para.repository.GameRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.HashSet;
@@ -32,20 +33,10 @@ public class ParaApplication {
 		SpringApplication.run(ParaApplication.class, args);
 	}
 	@Bean
-	CommandLineRunner run(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameMediaRepo gameMediaRepo){
+	CommandLineRunner run(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo, GameMediaRepo gameMediaRepo){
 		return args ->{
-			if(roleRepository.findByAuthority("ADMIN").isPresent()) return;
-			Role adminRole = roleRepository.save(new Role("ADMIN"));
-			roleRepository.save(new Role("USER"));
-
-			Set<Role> roles = new HashSet<>();
-			roles.add(adminRole);
-
-			ApplicationUser admin = new ApplicationUser(1, "admin@admin.com","admin", passwordEncode.encode("admin"), roles);
-
-			Game_Media defaultGameMedia = new Game_Media(1, "https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U");
-			gameMediaRepo.save(defaultGameMedia);
-			userRepository.save(admin);
+			SampleDataFiller sdf = new SampleDataFiller();
+			sdf.FillDatabase(roleRepository, userRepository, passwordEncode, gameRepo, gameMediaRepo);
 		};
 	}
 }
