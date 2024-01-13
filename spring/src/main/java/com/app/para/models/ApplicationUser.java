@@ -17,13 +17,18 @@ public class ApplicationUser implements UserDetails{
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "user_id")
     private Integer userId;
-    @Column(unique=true)
+    @Column(unique=true, nullable = false)
     private String email;
+    @Column(unique = true, nullable = false)
     private String username;
+    @Column(nullable = false)
     private String password;
-    @Column(name = "verification_code", length = 64)
+    @Column(name = "verification_code", length = 64, unique = true)
     private String verificationCode;
+    @Column()
+    private  String avatarUrl;
     private boolean enabled;
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(
@@ -37,8 +42,6 @@ public class ApplicationUser implements UserDetails{
         super();
         authorities = new HashSet<>();
     }
-
-
     public ApplicationUser(Integer userId, String email, String username, String password, Set<Role> authorities) {
         super();
         this.userId = userId;
@@ -46,6 +49,15 @@ public class ApplicationUser implements UserDetails{
         this.username = username;
         this.password = password;
         this.authorities = authorities;
+    }
+    public ApplicationUser(Integer userId, String email, String username, String password, Set<Role> authorities, String avatarUrl) {
+        super();
+        this.userId = userId;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.authorities = authorities;
+        this.avatarUrl = avatarUrl;
     }
 
     public Integer getUserId() {
@@ -61,13 +73,11 @@ public class ApplicationUser implements UserDetails{
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // TODO Auto-generated method stub
         return this.authorities;
     }
 
     @Override
     public String getPassword() {
-        // TODO Auto-generated method stub
         return password;
     }
 
@@ -77,7 +87,6 @@ public class ApplicationUser implements UserDetails{
 
     @Override
     public String getUsername() {
-        // TODO Auto-generated method stub
         return this.username;
     }
 
@@ -88,19 +97,16 @@ public class ApplicationUser implements UserDetails{
     /* If you want account locking capabilities create variables and ways to set them for the methods below */
     @Override
     public boolean isAccountNonExpired() {
-        // TODO Auto-generated method stub
         return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        // TODO Auto-generated method stub
         return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        // TODO Auto-generated method stub
         return true;
     }
 
@@ -117,11 +123,25 @@ public class ApplicationUser implements UserDetails{
         return email;
     }
 
+    public void setEmail(String email) {this.email = email;}
+
     public void setVerificationCode(String randomCode) {
         this.verificationCode=randomCode;
     }
 
     public String getVerificationCode() {
         return this.verificationCode;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 }

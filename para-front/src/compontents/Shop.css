@@ -1,0 +1,38 @@
+
+
+.shop {
+    min-height: 100%;
+    flex: 1;
+    background: var(--main_background);
+    width: auto;
+    border: solid 1px;
+}
+
+
+.content-shop{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.games {
+    width: 40%;
+    background:var(--section_background);
+    opacity: 0.9;
+}
+
+.sort{
+    border: solid 1px;
+    margin: 5%;
+    background:var(--section_background);
+    opacity: 0.9;
+    width: 20%;
+    height: 300px;
+}
+
+.item-container{
+    padding: 1%;
+    width: 30%;
+    border: solid 1px;
+    margin: 10%;
+}
+

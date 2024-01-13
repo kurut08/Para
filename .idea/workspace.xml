@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added React Register/Verify/Login/Home Page">
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Edit.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Layout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Library.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" afterDir="false" />
+    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added Friends and Invites">
+      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/GameControllerUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +25,8 @@
       <list>
         <option value="Enum" />
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Dockerfile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,16 +34,22 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Docker-expanded" />
+        <entry key="$PROJECT_DIR$" value="database-tweaks" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="nsaug9qj" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -71,20 +68,34 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker.react: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker/frontend/Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.frontend/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ParaApplication.executor&quot;: &quot;Run&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;front-test&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Java/AFAFI - GIT&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -108,21 +119,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ParaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.para.ParaApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.app.para.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker.react: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="services">
-            <list>
-              <option value="react" />
-            </list>
-          </option>
           <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker/frontend/Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="node20-alpine_build" />
+          <option name="buildCliOptions" value="--target build" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="docker/frontend/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="frontend/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="docker/frontend/Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
@@ -130,10 +176,18 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ParaApplication" />
-        <item itemvalue="Docker.docker.react: Compose Deployment" />
-        <item itemvalue="Application.ParaApplication" />
+        <item itemvalue="Docker.docker/frontend/Dockerfile build" />
+        <item itemvalue="Docker.docker: Compose Deployment" />
+        <item itemvalue="Docker.frontend/Dockerfile" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -146,6 +200,13 @@
       <workItem from="1702573508117" duration="58000" />
       <workItem from="1702575772047" duration="2421000" />
       <workItem from="1702580659217" duration="608000" />
+      <workItem from="1703860886580" duration="469000" />
+      <workItem from="1703861368976" duration="1162000" />
+      <workItem from="1703862636240" duration="884000" />
+      <workItem from="1703863645679" duration="7222000" />
+      <workItem from="1703882670355" duration="315000" />
+      <workItem from="1704394917970" duration="6061000" />
+      <workItem from="1704480884024" duration="985000" />
     </task>
     <task id="LOCAL-00001" summary="working login demo">
       <created>1700759450337</created>
@@ -225,7 +286,22 @@
       <option name="project" value="LOCAL" />
       <updated>1703269935043</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Small changes">
+      <option name="closed" value="true" />
+      <created>1703881664441</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703881664441</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added Friends and Invites">
+      <created>1704971734529</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704971734529</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +358,12 @@
     <MESSAGE value="Mails are working now (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" />
     <MESSAGE value="Expanded docker with React" />
     <MESSAGE value="Added React Register/Verify/Login/Home Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added React Register/Verify/Login/Home Page" />
+    <MESSAGE value="Small changes" />
+    <MESSAGE value="Added Friends and Invites" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Friends and Invites" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

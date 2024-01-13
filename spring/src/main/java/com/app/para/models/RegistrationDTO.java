@@ -1,6 +1,5 @@
 package com.app.para.models;
 
-import jakarta.persistence.Column;
 
 public class RegistrationDTO {
     private String email;

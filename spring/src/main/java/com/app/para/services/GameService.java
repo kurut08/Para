@@ -13,8 +13,8 @@ public class GameService {
     @Autowired
     private GameRepo gameRepo;
 
-    public void save(Game game) {
-        gameRepo.save(game);
+    public Game addGame(String title, String description, Float price, String genres) {
+        return gameRepo.save(new Game(0, title, description, price, genres));
     }
 
     public List<Game> getAllGames(){

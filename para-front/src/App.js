@@ -9,40 +9,9 @@ import Shop from "./compontents/Shop";
 import Library from "./compontents/Library";
 import Profile from "./compontents/Profile";
 import Edit from "./compontents/Edit";
-import {useEffect, useState} from "react";
+
 
 function App() {
-    const [games, setGames] = useState();
-    const [game, setGame] = useState();
-
-    const getGames = async () =>{
-
-        try
-        {
-            const response = await api.get("http://localhost:8080/shop");
-            setGames(response.data);
-        }
-        catch(err)
-        {
-            console.log(err);
-        }
-    }
-
-    const getGameData = async (gameId) => {
-        try
-        {
-            const response = await api.get(`http://localhost:8080/shop/${gameId}`);
-            const singleGame = response.data;
-            setGame(singleGame);
-        }
-        catch (error)
-        {
-            console.error(error);
-        }
-    }
-    useEffect(() => {
-        getGames();
-    },[])
   return (
 
       <div className="App">
@@ -53,10 +22,10 @@ function App() {
               <Route path="/" element= { <Home/>} />//NON-LOGIN
               <Route path="/register" element= { <Register/>} />
               <Route path="/login" element= { <Login/>} />
-              <Route path="/shop" element={ <Shop games={games} />} />//USER-->
-              <Route path="/lib" element={ <Library/>} />//USER-->
-              <Route path="/profile" element={ <Profile/>} />//USER-->
-              <Route path="/edit" element={ <Edit/>} /> //ADMIN-->
+              <Route path="/shop" exact element={ <Shop/>} />//USER
+              <Route path="/lib" element={ <Library/>} />//USER
+              <Route path="/profile" element={ <Profile/>} />//USER
+              <Route path="/edit" element={ <Edit/>} /> //ADMIN
           </Routes>
           </BrowserRouter>
       </div>

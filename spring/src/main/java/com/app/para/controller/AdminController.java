@@ -1,34 +1,33 @@
 package com.app.para.controller;
 
 import com.app.para.models.Game;
-import com.app.para.models.GameUser;
+import com.app.para.models.Game_Library;
 import com.app.para.services.GameService;
-import com.app.para.services.GameServiceUser;
+import com.app.para.services.GameLibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/shop")
-@CrossOrigin("*")
+@RequestMapping("/admin")
+@CrossOrigin(origins = "*")
 public class AdminController {
     @Autowired
     private GameService gameService;
 
     @Autowired
-    private GameServiceUser gameServiceUser;
+    private GameLibraryService gameLibraryService;
 
-    @GetMapping
+    @GetMapping("/shop")
     public ResponseEntity<List<Game>> getGames() {
-        return new ResponseEntity<List<Game>>(gameService.getAllGames(), HttpStatus.OK);
+        return new ResponseEntity<>(gameService.getAllGames(), HttpStatus.OK);
     }
-    @GetMapping("/{gameId}")
+    @GetMapping("/shop/{gameId}")
     public ResponseEntity<Optional<Game>> getSingleGame(@PathVariable String gameId){
         return new ResponseEntity<Optional<Game>>(gameService.findGameById(gameId), HttpStatus.OK);
     }
@@ -43,22 +42,13 @@ public class AdminController {
         gameService.deleteById(id);
         return "deleted";
     }
-    @PostMapping("/save")
-    public String addGame(@ModelAttribute Game game) {
-        gameService.save(game);
-        return "redirect:/available_game";
-    }
-    @GetMapping("/addgame")
-    public String gameAdd() {
-        return "gameadd";
-    }
-
 
     @GetMapping("/mygames")
     public String getMyGames(Model model)
     {
-        List<GameUser>list= gameServiceUser.getAllMyGames();
+        List<Game_Library>list= gameLibraryService.getAllMyGames();
         model.addAttribute("game",list);
         return "myGames";
     }
 }
+// TODO DELETE THIS FILE AFTER MOVING THESE FUNCS TO AuthenticationController.java

@@ -1,0 +1,31 @@
+.game-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
+}
+
+.game-image {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.game-info {
+    flex-grow: 1;
+}
+
+.game-title {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.game-release-date {
+    margin: 0;
+    color: #666;
+}
+
+.game-price {
+    margin: 0;
+    font-weight: bold;
+}
