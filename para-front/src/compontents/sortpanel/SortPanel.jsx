@@ -18,12 +18,17 @@ const SortPanel = ({ onGenreChange, onMaxPriceChange, onSearch }) => {
             />
             <select onChange={e => onGenreChange(e.target.value)} className="genre-select">
                 <option value="">Select Genre</option>
-                <option value="RPG">RPG</option>
                 <option value="Action">Action</option>
-                <option value="Strategy">Strategy</option>
                 <option value="Adventure">Adventure</option>
+                <option value="Base building">Base building</option>
+                <option value="City building">City building</option>
+                <option value="FPS">FPS</option>
+                <option value="Idle">Idle</option>
+                <option value="RPG">RPG</option>
                 <option value="Simulation">Simulation</option>
                 <option value="Sports">Sports & Racing</option>
+                <option value="Strategy">Strategy</option>
+                <option value="Survival">Survival</option>
             </select>
             <div className="price-slider-container">
                 <label htmlFor="price-slider">Max Price: {sliderValue}$</label>

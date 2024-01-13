@@ -5,7 +5,7 @@ const GameList = ({ games }) => {
     return (
         <div className="game-list">
             {games.map(game => (
-                <div className="game-item">
+                <div className="game-item" key={game.id}>
                     <img className="game-image" src={game.url} alt={game.title}/>
                     <div className="game-info">
                         <h2 className="game-title">{game.title}</h2>

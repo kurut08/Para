@@ -7,6 +7,7 @@ import GameList from './gamelist/GameList';
 import SortPanel from './sortpanel/SortPanel';
 import {PriceRangeBar} from './pricerangebar/PriceRangeBar'
 import './Shop.css';
+import { debounce } from 'lodash';
 function Shop(){
     const defaultVaule = [];
     const [games, setGames] = useState(defaultVaule);
@@ -32,7 +33,9 @@ function Shop(){
     };
     useEffect(() => {
         getGames();
+    }, []);
 
+    const handleFilterLogic = debounce(() => {
         let filtered = games;
 
         if (searchTerm) {
@@ -50,6 +53,13 @@ function Shop(){
         }
 
         setFilteredGames(filtered);
+    }, 500);
+
+    useEffect(() => {
+        handleFilterLogic();
+        return () => {
+            handleFilterLogic.cancel();
+        }
     }, [searchTerm, selectedGenre, maxPrice, games]);
 
     const navigateToHome = () => {

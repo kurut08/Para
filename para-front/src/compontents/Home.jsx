@@ -42,34 +42,34 @@ function Home() {
                     <div className="image-panels">
                         {/* Row 1 */}
                         <div className="image-panel">
-                            <a href="https://example.com/link-to-image1" target="_blank" rel="noopener noreferrer">
-                                <img src="https://example.com/image1.jpg" alt="Image 1"/>
+                            <a href="https://cdn.akamai.steamstatic.com/steam/apps/526870/header.jpg?t=1701857353" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/526870/header.jpg?t=1701857353" alt="Image 1"/>
                             </a>
                         </div>
                         <div className="image-panel">
-                            <a href="https://example.com/link-to-image1" target="_blank" rel="noopener noreferrer">
-                                <img src="https://example.com/image1.jpg" alt="Image 1"/>
+                            <a href="https://cdn.akamai.steamstatic.com/steam/apps/383870/header.jpg?t=1688484486" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/383870/header.jpg?t=1688484486" alt="Image 1"/>
                             </a>
                         </div>
                         <div className="image-panel">
-                            <a href="https://example.com/link-to-image1" target="_blank" rel="noopener noreferrer">
-                                <img src="https://example.com/image1.jpg" alt="Image 1"/>
+                            <a href="https://cdn.akamai.steamstatic.com/steam/apps/323190/header.jpg?t=1701879213" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/323190/header.jpg?t=1701879213" alt="Image 1"/>
                             </a>
                         </div>
                         {/* Row 2 */}
                         <div className="image-panel">
-                            <a href="https://example.com/link-to-image1" target="_blank" rel="noopener noreferrer">
-                                <img src="https://example.com/image1.jpg" alt="Image 1"/>
+                            <a href="https://cdn.akamai.steamstatic.com/steam/apps/1086940/header.jpg?t=1703250718" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1086940/header.jpg?t=1703250718" alt="Image 1"/>
                             </a>
                         </div>
                         <div className="image-panel">
-                            <a href="https://example.com/link-to-image1" target="_blank" rel="noopener noreferrer">
-                                <img src="https://example.com/image1.jpg" alt="Image 1"/>
+                            <a href="https://cdn.cloudflare.steamstatic.com/steam/apps/2207490/header.jpg?t=1705005734" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2207490/header.jpg?t=1705005734" alt="Image 1"/>
                             </a>
                         </div>
                         <div className="image-panel">
-                            <a href="https://example.com/link-to-image1" target="_blank" rel="noopener noreferrer">
-                                <img src="https://example.com/image1.jpg" alt="Image 1"/>
+                            <a href="https://cdn.cloudflare.steamstatic.com/steam/apps/1222690/header.jpg?t=1668811031" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1222690/header.jpg?t=1668811031" alt="Image 1"/>
                             </a>
                         </div>
                     </div>
