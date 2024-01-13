@@ -15,11 +15,8 @@ public class Game {
     @Column(nullable = false)
     private Float price;
     private String genre;
-
-
-    @OneToOne
-    @JoinColumn(name = "game_media_id", referencedColumnName = "game_media_id")
-    private Game_Media game_media;
+    @Column(nullable = false, columnDefinition = "TEXT")
+    private String url;
 
     public Game(int id, String title, String description, Float price, String genre) {
         super();
@@ -30,14 +27,14 @@ public class Game {
         this.genre = genre;
     }
 
-    public Game(int id, String title, String description, Float price, String genre, Game_Media gameMedia) {
+    public Game(int id, String title, String description, Float price, String genre, String url) {
         super();
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.genre = genre;
-        this.game_media = gameMedia;
+        this.url = url;
     }
 
     public Game() {
@@ -75,6 +72,6 @@ public class Game {
         this.genre = genre;
     }
 
-    public Game_Media getGameMedia() { return this.game_media; }
-    public void setGameMedia(Game_Media game_media) { this.game_media = game_media; }
+    public String getUrl() { return url; }
+    public void setURL(String url) { this.url = url; }
 }

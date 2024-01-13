@@ -2,9 +2,7 @@ package com.app.para;
 
 import com.app.para.models.ApplicationUser;
 import com.app.para.models.Game;
-import com.app.para.models.Game_Media;
 import com.app.para.models.Role;
-import com.app.para.repository.GameMediaRepo;
 import com.app.para.repository.GameRepo;
 import com.app.para.repository.RoleRepo;
 import com.app.para.repository.UserRepo;
@@ -14,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class SampleDataFiller
 {
-    public void FillDatabase(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo, GameMediaRepo gameMediaRepo)
+    public void FillDatabase(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo)
     {
         if(roleRepository.findByAuthority("ADMIN").isPresent()) return;
         Role adminRole = roleRepository.save(new Role("ADMIN"));
@@ -24,8 +22,6 @@ public class SampleDataFiller
         roles.add(adminRole);
         ApplicationUser admin = new ApplicationUser(1, "admin@admin.com","admin", passwordEncode.encode("admin"), roles);
 
-        Game_Media defaultGameMedia = new Game_Media(1, "https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U");
-        gameMediaRepo.save(defaultGameMedia);
         userRepository.save(admin);
         String[] games = {"Satisfactory", "Firewatch", "Frostpunk", "Far Cry 5",
         "Detroid Become Human", "Baldur's Gate 3", "Rust", "Factory Town Idle",
@@ -80,17 +76,13 @@ public class SampleDataFiller
                 "https://cdn.cloudflare.steamstatic.com/steam/apps/1328670/header.jpg?t=1669773470",
                 "https://cdn.cloudflare.steamstatic.com/steam/apps/1238000/header.jpg?t=1661437203"
         };
-        Game_Media gameMedia = new Game_Media(1, "https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U");
-        gameMediaRepo.save(gameMedia);
 
 
 
         Game game;
         for(int i = 0; i < 20; i++)
         {
-            gameMedia = new Game_Media(i+2, links[i]);
-            gameMediaRepo.save(gameMedia);
-            game = new Game(i+1, games[i], descriptions[i], prices[i], genres[i], gameMedia);
+            game = new Game(i+1, games[i], descriptions[i], prices[i], genres[i], links[i]);
             gameRepo.save(game);
         }
     }
