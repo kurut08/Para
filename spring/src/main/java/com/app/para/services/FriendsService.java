@@ -2,13 +2,9 @@ package com.app.para.services;
 import java.util.List;
 
 import com.app.para.models.Friends;
-import com.app.para.models.Game;
 import com.app.para.models.Invite;
 import com.app.para.repository.FriendsRepo;
-import com.app.para.repository.GameLibraryRepo;
-import com.app.para.models.Game_Library;
 import com.app.para.repository.InviteRepo;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

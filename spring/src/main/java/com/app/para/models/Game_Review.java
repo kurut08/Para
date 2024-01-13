@@ -19,7 +19,7 @@ public class Game_Review
     private Integer id;
     @Column(name = "type", nullable = false)
     private Boolean type;
-    @Column(name = "text")
+    @Column(name = "text", columnDefinition = "TEXT")
     private String text;
 
     @OneToOne

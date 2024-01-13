@@ -15,7 +15,7 @@ public class Game_Media
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "game_media_id")
     private Integer id;
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String url;
 
     public Game_Media() { super();}

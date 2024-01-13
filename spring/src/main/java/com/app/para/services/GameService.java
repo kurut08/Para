@@ -1,11 +1,7 @@
 package com.app.para.services;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
-import com.app.para.models.ApplicationUser;
-import com.app.para.models.Role;
 import com.app.para.repository.GameRepo;
 import com.app.para.models.Game;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,21 +8,14 @@
 * */
 package com.app.para;
 
-import com.app.para.models.Game_Media;
 import com.app.para.repository.GameMediaRepo;
 import com.app.para.repository.GameRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.util.HashSet;
-import java.util.Set;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.app.para.models.ApplicationUser;
-import com.app.para.models.Role;
 import com.app.para.repository.RoleRepo;
 import com.app.para.repository.UserRepo;
 
