@@ -1,12 +1,6 @@
 package com.app.para.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.persistence.*;
 
 @Entity
 public class Game {
@@ -14,20 +8,25 @@ public class Game {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
+    @Column(unique = true, nullable = false)
     private String title;
     private String description;
-    private String price;
-    private String imageUrl;
-    private String genres;
+    @Column(nullable = false)
+    private Float price;
+    private String genre;
 
-    public Game(int id, String title, String description, String price, String imageUrl, String genres) {
+
+    @OneToOne
+    @JoinColumn(name = "game_media_id", referencedColumnName = "game_media_id")
+    private Game_Media game_media;
+
+    public Game(int id, String title, String description, Float price, String genre) {
         super();
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
-        this.imageUrl = imageUrl;
-        this.genres = genres;
+        this.genre = genre;
     }
     public Game() {
         super();
@@ -51,22 +50,19 @@ public class Game {
     public void setDescription(String description) {
         this.description = description;
     }
-    public String getPrice() {
+    public Float getPrice() {
         return price;
     }
-    public void setPrice(String price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
-    public String getImageUrl() {
-        return imageUrl;
+    public String getGenre() {
+        return genre;
     }
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setGenres(String genre) {
+        this.genre = genre;
     }
-    public String getGenres() {
-        return genres;
-    }
-    public void setGenres(String genres) {
-        this.genres = genres;
-    }
+
+    public Game_Media getGameMedia() { return this.game_media; }
+    public void setGameMedia(Game_Media game_media) { this.game_media = game_media; }
 }

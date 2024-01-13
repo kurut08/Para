@@ -1,9 +1,9 @@
 package com.app.para.controller;
 
 import com.app.para.models.Game;
-import com.app.para.models.GameUser;
+import com.app.para.models.Game_Library;
 import com.app.para.services.GameService;
-import com.app.para.services.GameServiceUser;
+import com.app.para.services.GameLibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,7 +22,7 @@ public class UserController {
     private GameService gameService;
 
     @Autowired
-    private GameServiceUser gameServiceUser;
+    private GameLibraryService gameLibraryService;
     @GetMapping("/game_add")
     public String gameAdd() {
         return "gameadd";
@@ -38,7 +38,7 @@ public class UserController {
     }
     @GetMapping("/mygames")
     public String getMyGames(Model model) {
-        List<GameUser>list= gameServiceUser.getAllMyGames();
+        List<Game_Library>list= gameLibraryService.getAllMyGames();
         model.addAttribute("game",list);
         return "myGames";
     }

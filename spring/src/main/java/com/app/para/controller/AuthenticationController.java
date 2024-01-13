@@ -1,8 +1,9 @@
 package com.app.para.controller;
 
 import com.app.para.models.*;
+import com.app.para.services.FriendsService;
 import com.app.para.services.GameService;
-import com.app.para.services.GameServiceUser;
+import com.app.para.services.GameLibraryService;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,9 @@ public class AuthenticationController {
     @Autowired
     private GameService gameService;
     @Autowired
-    private GameServiceUser gameServiceUser;
+    private GameLibraryService gameLibraryService;
+    @Autowired
+    private FriendsService friendsService;
     @PostMapping("/register_email")
     public String processRegister(@RequestBody RegistrationDTO body, HttpServletRequest request) throws UnsupportedEncodingException, MessagingException {
         authenticationService.register(body.getEmail(), body.getUsername(), body.getPassword(), getSiteURL(request));
@@ -59,9 +62,9 @@ public class AuthenticationController {
             return "verify_fail";
         }
     }
-    @PostMapping("/addgame")
+    @PostMapping("/admin/addgame")
     public ResponseEntity<String> addGame(@RequestBody Game game){
-        gameService.addGame(game.getTitle(), game.getDescription(), game.getImageUrl(), game.getPrice(), game.getGenres());
+        gameService.addGame(game.getTitle(), game.getDescription(), game.getPrice(), game.getGenre());
         return new ResponseEntity<>("Added game", HttpStatus.OK);
     }
     @GetMapping("/shop")
@@ -69,26 +72,45 @@ public class AuthenticationController {
         return new ResponseEntity<>(gameService.getAllGames(), HttpStatus.OK);
     }
     @GetMapping("/shop/{gameId}")
-    public ResponseEntity<Optional<Game>> getSingleGame(@PathVariable String gameId){
+    public ResponseEntity<Optional<Game>> getSingleGame(@PathVariable String gameId, @RequestBody Game game){
         return new ResponseEntity<Optional<Game>>(gameService.findGameById(gameId), HttpStatus.OK);
     }
-    @RequestMapping("/editGame/{id}")
-    public String editGame(@PathVariable("id") String id, Model model) {
-        //Game game = gameService.getGameById(id);
-        //model.addAttribute("game",game);
-        return "gameEdit";
-    }
-    @RequestMapping("/deleteGame/{id}")
+    //@RequestMapping("/admin/editGame/{id}")
+    //public ResponseEntity<Optional<Game>> editGame(@PathVariable("id") String id, @RequestBody Game game) {
+        //String edit = gameService.findGameById(id);
+
+    //}
+    @RequestMapping("/admin/deleteGame/{id}")
     public String deleteGame(@PathVariable("id")String id) {
         gameService.deleteById(id);
         return "deleted";
     }
-    @GetMapping("/mygames")
+    @GetMapping("/user/mygames")
     public String getMyGames(Model model)
     {
-        List<GameUser>list= gameServiceUser.getAllMyGames();
+        List<Game_Library>list= gameLibraryService.getAllMyGames();
         model.addAttribute("game",list);
         return "myGames";
     }
+    @GetMapping("/user/friendList")
+    public ResponseEntity<List<Friends>> getAllFriends() {
+        return new ResponseEntity<>(friendsService.getAllFriends(), HttpStatus.OK);
+    }
+    @RequestMapping("/user/createInvite")
+    public ResponseEntity<String> createInvite(@RequestBody Invite invite){
+        friendsService.createInvite(invite.getInviteId(), invite.getUserFrom(), invite.getUserTo());
+        return new ResponseEntity<>("Request sent", HttpStatus.OK);
+    }
+    @RequestMapping("/user/acceptInvite")
+    public ResponseEntity<String> acceptInvite(@RequestBody Invite invite, boolean accept){
+        friendsService.acceptInvite(invite, accept);
+        return new ResponseEntity<>("Accepted/Declined", HttpStatus.OK);
+    }
+    @GetMapping("/user/inviteList")
+    public ResponseEntity<List<Invite>> getAllInvites(){
+        return new ResponseEntity<>(friendsService.getAllInvites(), HttpStatus.OK);
+    }
+
+
 }
 // TODO FIX MAPPING IN EVERY FUNCTION FOR USERS AND ADMIN
