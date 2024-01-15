@@ -4,6 +4,7 @@ import axios from "axios";
 import {Toggle} from '../toggle/Toggle';
 import {Footer} from '../footer/Footer';
 import './Login.css';
+import { isEmpty } from "validator";
 
 
 function Login() {
@@ -16,20 +17,22 @@ function Login() {
     async function login(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/auth/loginMess", {
+            await axios.post("http://localhost:8080/auth/login", {
                 username: username,
                 password: password,
             }).then((res) =>
             {
 
                 console.log(res.data);
+                console.log(res.data.jwt)
 
                 if (res.data.message === "Username not exits")
                 {
                     alert("Username not exits");
                 }
-                else if(res.data.message === "Login Success")
+                else if(!isEmpty(res.data.jwt))
                 {
+                    localStorage.setItem("user", JSON.stringify(res.data))
                     navigate('/shop');
                 }
                 else

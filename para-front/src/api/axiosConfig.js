@@ -4,5 +4,3 @@ export default axios.create({
     headers: {"ngrok-skip-browser-warning": "true"}
     
 });
-//https://youtu.be/5PdEmeopJVQ?t=6767&si=8Gf8j2qveJso32Dp
-//1:52:47 create home and hero component

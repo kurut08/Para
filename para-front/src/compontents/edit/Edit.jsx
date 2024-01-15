@@ -7,6 +7,7 @@ function Edit(){
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
     const [genres, setGenres] = useState("");
+    const [id, setId] = useState("");
 
     async function addGame(event) {
         event.preventDefault();
@@ -29,13 +30,11 @@ function Edit(){
             alert(err);
         }
     }
-    
+
     async function delGame(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/auth/admin/delgame", {
-                title: title,
-            }).then((res) =>
+            await axios.post("http://localhost:8080/auth/delgame"+{id}, {mode:'cors'}).then((res) =>
             {
                 alert("Deleted game");
             }, fail => {
@@ -99,11 +98,11 @@ function Edit(){
                         <h2>Delete Game</h2>
                         <form>
                             <div className="form-group">
-                                <label>Title</label>
-                                <input type="text" className="form-control" id="title" placeholder="Enter title"
-                                       value={title}
+                                <label>Id</label>
+                                <input type="text" className="form-control" id="id" placeholder="Enter id"
+                                       value={id}
                                        onChange={(event) => {
-                                           setTitle(event.target.value);
+                                           setId(event.target.value);
                                        }}
                                 />
                             </div>

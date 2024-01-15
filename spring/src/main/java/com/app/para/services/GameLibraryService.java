@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.app.para.repository.GameLibraryRepo;
 import com.app.para.models.Game_Library;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,8 +17,8 @@ public class GameLibraryService
         gameRepoUser.save(game);
     }
 
-    public List<Game_Library> getAllMyGames(){
-        return gameRepoUser.findAll();
+    public Optional<Game_Library> getAllMyGames(Integer id){
+        return gameRepoUser.findGame_LibraryByUserId(id);
     }
 
     public void deleteById(int id) {

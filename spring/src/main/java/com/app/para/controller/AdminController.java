@@ -42,13 +42,5 @@ public class AdminController {
         gameService.deleteById(id);
         return "deleted";
     }
-
-    @GetMapping("/mygames")
-    public String getMyGames(Model model)
-    {
-        List<Game_Library>list= gameLibraryService.getAllMyGames();
-        model.addAttribute("game",list);
-        return "myGames";
-    }
 }
 // TODO DELETE THIS FILE AFTER MOVING THESE FUNCS TO AuthenticationController.java

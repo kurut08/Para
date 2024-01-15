@@ -1,10 +1,10 @@
 package com.app.para.services;
-import java.util.List;
 
 import com.app.para.models.Friends;
 import com.app.para.models.Invite;
 import com.app.para.repository.FriendsRepo;
 import com.app.para.repository.InviteRepo;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,11 +26,11 @@ public class FriendsService
             inviteRepo.delete(invite);
         }
     }
-    public List<Invite> getAllInvites(){
-        return inviteRepo.findAll();
+    public Optional<Invite> getAllInvites(Integer id){
+        return inviteRepo.findInviteById(id);
     }
-    public List<Friends> getAllFriends(){
-        return friendsRepo.findAll();
+    public Optional<Friends> getAllFriends(Integer id){
+        return friendsRepo.findFriendsById(id);
     }
     public void deleteFriends(int id) {
         friendsRepo.deleteById(id);

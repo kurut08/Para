@@ -1,9 +1,13 @@
 import Item from '../item/Item';
-import React, {useState, useEffect} from 'react';
+import React, { Component } from "react";
+import {useState, useEffect} from 'react';
 import './Home.css';
-import {Toggle} from '../toggle/Toggle';
-import {Footer} from '../footer/Footer';
+import {Toggle} from'../toggle/Toggle';
+import {Footer} from'../footer/Footer';
 import {Routes, Route, useNavigate} from 'react-router-dom';
+import UserService from "../../services/user.service";
+
+
 function Home() {
     const xd = ({games}) => {
         return (
@@ -24,16 +28,33 @@ function Home() {
         navigate('/');
     };
 
-
+    function componentDidMount() {
+        UserService.getPublicContent().then(
+            response => {
+                this.setState({
+                    content: response.data
+                });
+            },
+            error => {
+                this.setState({
+                    content:
+                        (error.response && error.response.data) ||
+                        error.message ||
+                        error.toString()
+                });
+            }
+        );
+    }
 
     return (
         <div className="App">
+            {componentDidMount}
             <div className="logo-container">
                 <div onClick={navigateToHome}>
                     <img src="/path/to/your/logo.png" alt="App Logo" className="app-logo"/>
                 </div>
                 <div className="switch-container">
-                        <Toggle/>
+                    <Toggle/>
                 </div>
             </div>
             <div className="main-content">
@@ -87,5 +108,4 @@ function Home() {
         </div>
     );
 }
-
 export default Home;

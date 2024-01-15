@@ -2,7 +2,9 @@ package com.app.para;
 
 import com.app.para.models.ApplicationUser;
 import com.app.para.models.Game;
+import com.app.para.models.Game_Library;
 import com.app.para.models.Role;
+import com.app.para.repository.GameLibraryRepo;
 import com.app.para.repository.GameRepo;
 import com.app.para.repository.RoleRepo;
 import com.app.para.repository.UserRepo;
@@ -12,7 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class SampleDataFiller
 {
-    public void FillDatabase(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo)
+    public void FillDatabase(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo, GameLibraryRepo gameLibraryRepo)
     {
         if(roleRepository.findByAuthority("ADMIN").isPresent()) return;
         Role adminRole = roleRepository.save(new Role("ADMIN"));
@@ -23,6 +25,10 @@ public class SampleDataFiller
         ApplicationUser admin = new ApplicationUser(1, "admin@admin.com","admin", passwordEncode.encode("admin"), roles);
 
         userRepository.save(admin);
+
+        Game_Library gameLibrary = new Game_Library();
+        gameLibrary.setUser(admin);
+
         String[] games = {"Satisfactory", "Firewatch", "Frostpunk", "Far Cry 5",
         "Detroid Become Human", "Baldur's Gate 3", "Rust", "Factory Town Idle",
         "Melvor Idle", "Rainbow Six Siege", "Call of Duty: WWII", "Company of Heroes",
@@ -84,6 +90,12 @@ public class SampleDataFiller
         {
             game = new Game(i+1, games[i], descriptions[i], prices[i], genres[i], links[i]);
             gameRepo.save(game);
+
+            if(i == 10 || i == 11)
+            {
+                gameLibrary.setGame(game);
+                gameLibraryRepo.save(gameLibrary);
+            }
         }
     }
 }

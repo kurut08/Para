@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GameLibraryRepo extends JpaRepository<Game_Library,Integer> {
-    Optional<Game_Library> findGameLibraryById(Integer id);
+    Optional<Game_Library> findGame_LibraryById(Integer id);
+    Optional<Game_Library> findGame_LibraryByUserId(Integer id);
 
 }

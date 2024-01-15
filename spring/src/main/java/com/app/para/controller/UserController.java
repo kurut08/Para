@@ -36,11 +36,5 @@ public class UserController {
 		m.addObject("game",list);
         return new ModelAndView("gameList","game",list);
     }
-    @GetMapping("/mygames")
-    public String getMyGames(Model model) {
-        List<Game_Library>list= gameLibraryService.getAllMyGames();
-        model.addAttribute("game",list);
-        return "myGames";
-    }
 }
 // TODO DELETE THIS FILE AFTER MOVING THESE FUNCS TO AuthenticationController.java

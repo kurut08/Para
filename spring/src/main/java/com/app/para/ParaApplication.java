@@ -1,13 +1,6 @@
-/*
-* NIE WIEM CZY KTOŚ TO BĘDZIE CZYTAŁ, ALE CÓŻ
-* NO ELO
-* https://www.youtube.com/watch?v=TeBt0Ike_Tk
-* 1:34:00 TEST POSTMANA, WSZO DZIAŁA
-* https://www.youtube.com/watch?v=5PdEmeopJVQ
-* 1:38:00 FUN WITH REACT
-* */
 package com.app.para;
 
+import com.app.para.repository.GameLibraryRepo;
 import com.app.para.repository.GameRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,10 +18,10 @@ public class ParaApplication {
 		SpringApplication.run(ParaApplication.class, args);
 	}
 	@Bean
-	CommandLineRunner run(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo){
+	CommandLineRunner run(RoleRepo roleRepository, UserRepo userRepository, PasswordEncoder passwordEncode, GameRepo gameRepo, GameLibraryRepo gameLibraryRepo){
 		return args ->{
 			SampleDataFiller sdf = new SampleDataFiller();
-			sdf.FillDatabase(roleRepository, userRepository, passwordEncode, gameRepo);
+			sdf.FillDatabase(roleRepository, userRepository, passwordEncode, gameRepo, gameLibraryRepo);
 		};
 	}
 }
