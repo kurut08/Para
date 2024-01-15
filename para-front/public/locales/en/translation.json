@@ -1,3 +1,14 @@
 {
-  "store.label": "Store"
+  "store.label": "Store",
+  "library.label": "Library",
+  "profile.label": "Profile",
+  "login.label": "Login",
+  "username.label": "Username",
+  "enterUsername.label": "Enter username",
+  "password.label": "Password",
+  "enterPassword.label": "Enter password",
+  "email.label": "Email",
+  "enterEmail.label": "Enter email",
+  "userRegistration.label": "User registration",
+  "registerAndVerify.label": "Register and verify your email"
 }

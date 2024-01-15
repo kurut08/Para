@@ -4,6 +4,8 @@ import {Toggle} from '../toggle/Toggle';
 import {Footer} from '../footer/Footer';
 import {useNavigate} from 'react-router-dom';
 import './Register.css';
+import { useTranslation } from "react-i18next";
+
 function Register() {
 
     const [username, setUsername] = useState("");
@@ -30,6 +32,7 @@ function Register() {
         navigate('/');
     };
 
+    const { t, i18n } = useTranslation();
     return (
         <div className="main-container">
             <div className="logo-container">
@@ -42,12 +45,12 @@ function Register() {
             </div>
             <div class="container">
                 <div class="card">
-                    <h1>User Registration</h1>
+                    <h1>{t("userRegistration.label")}</h1>
 
                     <form>
                         <div class="form-group">
-                            <label>Username:</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter your Username"
+                            <label>{t("username.label")}:</label>
+                            <input type="text" class="form-control" id="username" placeholder={t("enterUsername.label")}
 
                                    value={username}
                                    onChange={(event) => {
@@ -58,8 +61,8 @@ function Register() {
                         </div>
 
                         <div class="form-group">
-                            <label>email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter Email"
+                            <label>{t("email.label")}</label>
+                            <input type="email" class="form-control" id="email" placeholder={t("enterEmail.label")}
 
                                    value={email}
                                    onChange={(event) => {
@@ -71,8 +74,8 @@ function Register() {
                         </div>
 
                         <div class="form-group">
-                            <label>password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password"
+                            <label>{t("password.label")}</label>
+                            <input type="password" class="form-control" id="password" placeholder={t("enterPassword.label")}
 
                                    value={password}
                                    onChange={(event) => {
@@ -82,8 +85,7 @@ function Register() {
                             />
                         </div>
 
-                        <button type="submit" class="btn btn-primary mt-4" onClick={save}>Register and verify your
-                            email
+                        <button type="submit" class="btn btn-primary mt-4" onClick={save}>{t("registerAndVerify.label")}
                         </button>
 
                     </form>

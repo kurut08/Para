@@ -5,6 +5,7 @@ import {Toggle} from '../toggle/Toggle';
 import {Footer} from '../footer/Footer';
 import './Login.css';
 import { isEmpty } from "validator";
+import { useTranslation } from "react-i18next";
 
 
 function Login() {
@@ -54,6 +55,7 @@ function Login() {
         navigate('/');
     };
 
+    const { t, i18n } = useTranslation();
     return (
         <div className="login-container">
             <header className="login-header">
@@ -65,25 +67,25 @@ function Login() {
                 </div>
             </header>
             <main className="login-main">
-                <h2>Login</h2>
+                <h2>{t("login.label")}</h2>
                 <hr />
                 <form onSubmit={login} className="login-form">
                     <div className="form-group">
-                        <label htmlFor="username">Username</label>
+                        <label htmlFor="username">{t("username.label")}</label>
                         <input
                             type="email"
                             id="username"
-                            placeholder="Enter Username"
+                            placeholder={t("enterUsername.label")}
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">{t("password.label")}</label>
                         <input
                             type="password"
                             id="password"
-                            placeholder="Enter Password"
+                            placeholder={t("enterPassword.label")}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />

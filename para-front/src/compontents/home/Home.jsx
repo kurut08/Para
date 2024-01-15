@@ -98,11 +98,11 @@ function Home() {
                     </div>
                 </div>
                 <div className="section-container library-section" onClick={navigateToLibrary}>
-                    <h2>Library</h2>
+                    <h2>{t("library.label")}</h2>
                     {/* Add library content here */}
                 </div>
                 <div className="section-container profile-section" onClick={navigateToProfile}>
-                    <h2>Profile</h2>
+                    <h2>{t("profile.label")}</h2>
                     {/* Add profile content here */}
                 </div>
             </div>
