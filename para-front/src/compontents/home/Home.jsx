@@ -61,7 +61,7 @@ function Home() {
             </div>
             <div className="main-content">
                 <div className="section-container store-section" onClick={navigateToShop}>
-                    <h2>{t("home.store.label")}</h2>
+                    <h2>{t("store.label")}</h2>
                     <div className="image-panels">
                         {/* Row 1 */}
                         <div className="image-panel">
