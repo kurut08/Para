@@ -6,6 +6,7 @@ import {Toggle} from'../toggle/Toggle';
 import {Footer} from'../footer/Footer';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import UserService from "../../services/user.service";
+import { useTranslation } from "react-i18next";
 
 
 function Home() {
@@ -46,6 +47,7 @@ function Home() {
         );
     }
 
+    const { t, i18n } = useTranslation();
     return (
         <div className="App">
             {componentDidMount}
@@ -59,7 +61,7 @@ function Home() {
             </div>
             <div className="main-content">
                 <div className="section-container store-section" onClick={navigateToShop}>
-                    <h2>Store</h2>
+                    <h2>{t("home.store.label")}</h2>
                     <div className="image-panels">
                         {/* Row 1 */}
                         <div className="image-panel">
