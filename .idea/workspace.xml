@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added Friends and Invites">
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Register.css" afterDir="false" />
+    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Created front for Register, Shop, Home and more in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/footer/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Library.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/library/Library.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/login/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/register/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/register/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Verify.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/verify/Verify.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/pricerangebar/PriceRangeBar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/pricerangebar/PriceRangeBar.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,46 +77,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.ParaApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.docker.react: Compose Deployment.executor": "Run",
-    "Docker.docker/frontend/Dockerfile build.executor": "Run",
-    "Docker.docker: Compose Deployment.executor": "Run",
-    "Docker.frontend/Dockerfile.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ParaApplication.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "front-test",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Desktop/Java/AFAFI - GIT",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.start.executor": "Run",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.tailwindcss",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ParaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker.react: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker/frontend/Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.frontend/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ParaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;front-test&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Java/AFAFI - GIT&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Desktop\Java\Para\docker\backend" />
-      <recent name="C:\Users\User\Desktop\Java\Para\Spring" />
+      <recent name="C:\Users\Mangekyou\Desktop\Para\para-front\src\compontents\header" />
+      <recent name="C:\Users\Mangekyou\Desktop\Para\para-front\src\compontents\library" />
+      <recent name="C:\Users\Mangekyou\Desktop\Para\para-front\src\compontents\login" />
+      <recent name="C:\Users\Mangekyou\Desktop\Para\para-front\src\compontents\register" />
+      <recent name="C:\Users\Mangekyou\Desktop\Para\para-front\src\compontents\profile" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ParaApplication">
@@ -197,6 +204,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+        <option value="jdk-21.0.1-corretto-21.0.1-f644763e9732-eed86825" />
       </set>
     </attachedChunks>
   </component>
@@ -218,7 +226,8 @@
       <workItem from="1703882670355" duration="315000" />
       <workItem from="1704394917970" duration="6061000" />
       <workItem from="1704480884024" duration="985000" />
-      <workItem from="1705258834717" duration="13114000" />
+      <workItem from="1705258834717" duration="13547000" />
+      <workItem from="1705308227635" duration="4646000" />
     </task>
     <task id="LOCAL-00001" summary="working login demo">
       <created>1700759450337</created>
@@ -313,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704971734529</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Created front for Register, Shop, Home and more in progress">
+      <option name="closed" value="true" />
+      <created>1705283236716</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705283236716</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +389,8 @@
     <MESSAGE value="Added React Register/Verify/Login/Home Page" />
     <MESSAGE value="Small changes" />
     <MESSAGE value="Added Friends and Invites" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Friends and Invites" />
+    <MESSAGE value="Created front for Register, Shop, Home and more in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created front for Register, Shop, Home and more in progress" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

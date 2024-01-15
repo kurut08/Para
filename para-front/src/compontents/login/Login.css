@@ -1,0 +1,88 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--main_background);
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header_background);
+}
+
+.login-logo img {
+    width: 100px;
+    cursor: pointer;
+}
+
+.login-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--primary-text-color);
+    margin-bottom: .5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input_background);
+    color: var(--primary-text-color);
+}
+
+.form-group input::placeholder {
+    color: var(--secondary-text-color);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--toggle-fg);
+}
+
+.btn:active {
+    background-color: var(--toggle-bg);
+}
+
+@media (max-width: 768px) {
+    .login-header {
+        flex-direction: column;
+    }
+
+    .login-logo img {
+        margin-bottom: 1rem;
+    }
+}

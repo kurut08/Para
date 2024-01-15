@@ -1,11 +1,10 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import {Toggle} from'./toggle/Toggle';
-import {Footer} from'./footer/Footer';
-import GameList from './gamelist/GameList';
-import SortPanel from './sortpanel/SortPanel';
-import {PriceRangeBar} from './pricerangebar/PriceRangeBar'
+import {Toggle} from '../toggle/Toggle';
+import {Footer} from '../footer/Footer';
+import GameList from '../gamelist/GameList';
+import SortPanel from '../sortpanel/SortPanel';
 import './Shop.css';
 import { debounce } from 'lodash';
 function Shop(){

@@ -1,7 +1,7 @@
 import {  useState } from "react";
 import axios from "axios";
-import {Toggle} from'./toggle/Toggle';
-import {Footer} from'./footer/Footer';
+import {Toggle} from '../toggle/Toggle';
+import {Footer} from '../footer/Footer';
 import {useNavigate} from 'react-router-dom';
 import './Register.css';
 function Register() {

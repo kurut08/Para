@@ -1,8 +1,8 @@
-import Item from './item/Item';
+import Item from '../item/Item';
 import React, {useState, useEffect} from 'react';
 import './Home.css';
-import {Toggle} from'./toggle/Toggle';
-import {Footer} from'./footer/Footer';
+import {Toggle} from '../toggle/Toggle';
+import {Footer} from '../footer/Footer';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 function Home() {
     const xd = ({games}) => {
