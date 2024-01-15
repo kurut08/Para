@@ -27,7 +27,6 @@ public class SampleDataFiller
         userRepository.save(admin);
 
         Game_Library gameLibrary = new Game_Library();
-        gameLibrary.setUser(admin);
 
         String[] games = {"Satisfactory", "Firewatch", "Frostpunk", "Far Cry 5",
         "Detroid Become Human", "Baldur's Gate 3", "Rust", "Factory Town Idle",
@@ -93,7 +92,7 @@ public class SampleDataFiller
 
             if(i == 10 || i == 11)
             {
-                gameLibrary.setGame(game);
+                gameLibrary = new Game_Library(admin, game);
                 gameLibraryRepo.save(gameLibrary);
             }
         }

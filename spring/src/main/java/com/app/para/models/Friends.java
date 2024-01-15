@@ -10,15 +10,14 @@ public class Friends {
     private int id;
     @JoinColumn(name = "owner", referencedColumnName = "user_id")
     @Column(nullable = false)
-    private int owner;
+    private ApplicationUser owner;
     @JoinColumn(name = "friend", referencedColumnName = "user_id")
     @Column(nullable = false)
-    private int friend;
+    private ApplicationUser friend;
 
 
-    public Friends(int friendListId, int owner, int friend) {
+    public Friends(ApplicationUser owner, ApplicationUser friend) {
         super();
-        this.id = friendListId;
         this.owner = owner;
         this.friend = friend;
     }
@@ -35,19 +34,19 @@ public class Friends {
         this.id = friendListId;
     }
 
-    public int getOwner() {
+    public ApplicationUser getOwner() {
         return owner;
     }
 
-    public void setOwner(int owner) {
+    public void setOwner(ApplicationUser owner) {
         this.owner = owner;
     }
 
-    public int getFriend() {
+    public ApplicationUser getFriend() {
         return friend;
     }
 
-    public void setFriend(int friend) {
+    public void setFriend(ApplicationUser friend) {
         this.friend = friend;
     }
 }

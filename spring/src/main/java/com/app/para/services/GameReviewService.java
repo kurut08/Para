@@ -7,6 +7,7 @@ import com.app.para.repository.GameReviewRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public class GameReviewService {
@@ -18,7 +19,7 @@ public class GameReviewService {
         return gameReviewRepo.save(new Game_Review(id, bool, text));
     }
 
-    public Optional<Game_Review> findGameReviewById(Integer id)
-    {
-        return gameReviewRepo.findReviewById(id);
-    }}
+    public Optional<List<Game_Review>> findReviewsByGameId(Integer gameId) {
+        return gameReviewRepo.findReviewById(gameId);
+    }
+}

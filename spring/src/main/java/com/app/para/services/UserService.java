@@ -1,5 +1,6 @@
 package com.app.para.services;
 
+import com.app.para.models.ApplicationUser;
 import com.app.para.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -21,5 +22,8 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
         System.out.println("UserDetails");
         return userRepo.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("Not found user"));
+    }
+    public ApplicationUser getUserById(Integer id){
+        return userRepo.getUserById(id);
     }
 }

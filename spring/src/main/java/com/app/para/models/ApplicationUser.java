@@ -59,7 +59,6 @@ public class ApplicationUser implements UserDetails{
         this.authorities = authorities;
         this.avatarUrl = avatarUrl;
     }
-
     public Integer getUserId() {
         return this.userId;
     }

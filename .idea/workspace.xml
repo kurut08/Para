@@ -4,33 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Created front for Register, Shop, Home and more in progress">
-      <change afterPath="$PROJECT_DIR$/para-front/src/common/with-router.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/services/auth-header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/services/auth.service.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/services/user.service.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameReviewRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added Services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/node_modules/watchpack/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/node_modules/watchpack/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/api/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/api/axiosConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/library/Library.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/library/Library.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/ParaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/ParaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/SampleDataFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/SampleDataFiller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/ApplicationUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/ApplicationUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game_Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game_Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameLibraryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameLibraryRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameReviewRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameReviewRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/InviteRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/InviteRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/FriendsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/FriendsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameLibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameLibraryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +125,7 @@
       <recent name="C:\Users\Mangekyou\Desktop\Para\para-front\src\compontents\profile" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ParaApplication">
     <configuration name="ParaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.app.para.ParaApplication" />
       <module name="demo" />
@@ -207,10 +201,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ParaApplication" />
         <item itemvalue="Docker.docker.pgadmin: Compose Deployment" />
         <item itemvalue="Docker.docker.db: Compose Deployment" />
-        <item itemvalue="Application.ParaApplication" />
-        <item itemvalue="Spring Boot.ParaApplication" />
         <item itemvalue="Docker.frontend/Dockerfile" />
       </list>
     </recent_temporary>
@@ -352,21 +345,6 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -384,6 +362,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

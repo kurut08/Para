@@ -17,30 +17,6 @@ import java.util.Optional;
 @RequestMapping("/admin")
 @CrossOrigin(origins = "*")
 public class AdminController {
-    @Autowired
-    private GameService gameService;
 
-    @Autowired
-    private GameLibraryService gameLibraryService;
-
-    @GetMapping("/shop")
-    public ResponseEntity<List<Game>> getGames() {
-        return new ResponseEntity<>(gameService.getAllGames(), HttpStatus.OK);
-    }
-    @GetMapping("/shop/{gameId}")
-    public ResponseEntity<Optional<Game>> getSingleGame(@PathVariable String gameId){
-        return new ResponseEntity<Optional<Game>>(gameService.findGameById(gameId), HttpStatus.OK);
-    }
-    @RequestMapping("/editGame/{id}")
-    public String editGame(@PathVariable("id") String id, Model model) {
-        //Game game = gameService.getGameById(id);
-        //model.addAttribute("game",game);
-        return "gameEdit";
-    }
-    @RequestMapping("/deleteGame/{id}")
-    public String deleteGame(@PathVariable("id")String id) {
-        gameService.deleteById(id);
-        return "deleted";
-    }
 }
 // TODO DELETE THIS FILE AFTER MOVING THESE FUNCS TO AuthenticationController.java

@@ -2,9 +2,11 @@ package com.app.para.models;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name="game_library")
-public class Game_Library {
+@Access(value=AccessType.FIELD)
+public class Game_Library{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,11 +24,12 @@ public class Game_Library {
         super();
         // TODO Auto-generated constructor stub
     }
-    public Game_Library(int id) {
+    public Game_Library(ApplicationUser user, Game game) {
         super();
-        this.id = id;
+        this.user = user;
+        this.game = game;
     }
-    public int getId() {
+    public long getId() {
         return id;
     }
     public void setId(int id) {

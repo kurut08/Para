@@ -21,10 +21,10 @@ public class GameService {
         return gameRepo.findAll();
     }
 
-    public Optional<Game> findGameById(String id) {
+    public Optional<Game> findGameById(Integer id) {
         return gameRepo.findGameById(id);
     }
-    public void deleteById(String id) {
+    public void deleteById(Integer id) {
         gameRepo.deleteById(id);
     }
 }
