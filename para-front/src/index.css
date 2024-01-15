@@ -12,23 +12,35 @@ code {
     monospace;
 }
 :root {
-  --header_background: #999;
-  --main_background: #FFF;
-  --section_background: #AAA;
-  --footer_background: #999;
-  --toggle-bg: #f0eb9d;
-  --toggle-fg: #ffd000;
-  --primary-text-color: #0a0a0a;
+  --header_background: #f8f9fa;
+  --main_background: #ffffff;
+  --section_background: #f2f3f5;
+  --footer_background: #f8f9fa;
+  --input_background: #5a6268;
+  --toggle-bg: #e9ecef;
+  --toggle-fg: #007bff;
+  --primary-text-color: #212529;
+  --secondary-text-color: #6c757d;
+  --accent-color: #007bff;
+  --border-color: #dee2e6;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
 }
 
 [data-theme="dark"] {
-  --header_background: #2c3e50;
-  --main_background: #5b6981;
-  --section_background: #2e4053;
-  --footer_background: #2c3e50;
+  --header_background: #1b2838;
+  --main_background: #17212b;
+  --section_background: #1c2938;
+  --footer_background: #1b2838;
+  --input_background: #32414b;
   --toggle-bg: #283452;
-  --toggle-fg: #00a6ff;
-  --primary-text-color: #f6f6f6;
+  --toggle-fg: #4a90e2;
+  --primary-text-color: #e1e1e6;
+  --secondary-text-color: #8892b0;
+  --accent-color: #4a90e2;
+  --border-color: #283452;
+  --button-bg: #4a90e2;
+  --button-text: #ffffff;
 }
 * {
   transition: all 0.3 ease-in-out;

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import {Toggle} from'./toggle/Toggle';
+import {Footer} from'./footer/Footer';
+import './Login.css';
 
 
 function Login() {
@@ -44,9 +47,20 @@ function Login() {
         }
 
     }
+    const navigateToHome = () => {
+        navigate('/');
+    };
 
     return (
         <div>
+            <div className="logo-container">
+                <div onClick={navigateToHome}>
+                    <img src="/path/to/your/logo.png" alt="App Logo" className="app-logo"/>
+                </div>
+                <div className="switch-container">
+                    <Toggle/>
+                </div>
+            </div>
             <div className="container">
                 <div className="row">
                     <h2>Login</h2>
@@ -59,7 +73,7 @@ function Login() {
                         <form>
                             <div className="form-group">
                                 <label>Username</label>
-                                <input type="email"  className="form-control" id="username" placeholder="Enter Username"
+                                <input type="email" className="form-control" id="username" placeholder="Enter Username"
 
                                        value={username}
                                        onChange={(event) => {
@@ -72,7 +86,8 @@ function Login() {
 
                             <div className="form-group">
                                 <label>password</label>
-                                <input type="password"  className="form-control" id="password" placeholder="Enter Password"
+                                <input type="password" className="form-control" id="password"
+                                       placeholder="Enter Password"
 
                                        value={password}
                                        onChange={(event) => {
@@ -81,13 +96,13 @@ function Login() {
 
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary" onClick={login} >Login</button>
+                            <button type="submit" className="btn btn-primary" onClick={login}>Login</button>
                         </form>
 
                     </div>
                 </div>
             </div>
-
+        <Footer/>
         </div>
     );
 }

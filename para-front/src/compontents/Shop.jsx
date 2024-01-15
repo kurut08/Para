@@ -76,7 +76,6 @@ function Shop(){
                 </div>
             </div>
             <div className="content-shop">
-                <h1>SHOP</h1>
                 <div className="sort">
                     <SortPanel
                         onSearch={setSearchTerm}

@@ -1,4 +1,8 @@
-/* src/components/Home.css */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 .logo-container {
     width: 100%;
@@ -7,8 +11,6 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    border: 1px solid;
-    box-shadow: 5px 10px 18px #888888;
 }
 
 .app-logo {
@@ -18,13 +20,14 @@
 }
 
 .main-content {
+    flex: 1;
     text-align: center;
-    padding: 30px 40px 40px;
+    padding: 30px 40px;
     align-items: center;
     background-color: var(--main_background);
     display: flex;
     flex-direction: row;
-    height: 90vh;
+    flex-grow: 1;
 }
 
 .section-container {
@@ -33,16 +36,18 @@
     flex-direction: column;
     justify-content: center;
     margin: 30px;
-    border: 2px solid #dcdcdc;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     padding: 20px;
     transition: all 0.3s ease;
+    color: var(--primary-text-color);
+    flex-grow: 1;
+    min-height: 400px;
+    width: 33%;
 }
 
 
 .store-section {
-    background-color: var(--section_background);
-    height: 60%;
     flex-direction: column;
     align-items: center;
 }
@@ -58,8 +63,8 @@
 .image-panel {
     width: calc(33.33% - 10px);
     height: 120px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--section_background);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     margin-bottom: 10px;
     overflow: hidden;
@@ -73,17 +78,14 @@
     margin: auto;
 }
 
-.library-section {
-    background-color: var(--section_background);
-    height: 60%;
-}
 
+.store-section,
+.library-section,
 .profile-section {
     background-color: var(--section_background);
-    height: 60%;
+    height: 100%;
 }
 
-/* Hover effect */
 .section-container:hover {
     height: 65%;
     width: 45%;
@@ -95,4 +97,6 @@
     margin-left: auto;
     align-content: flex-end;
 }
+
+
 

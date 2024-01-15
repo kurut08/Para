@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added Friends and Invites">
-      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/Register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/Shop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/footer/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/sortpanel/SortPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +35,14 @@
         <option value="Dockerfile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="database-tweaks" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,40 +73,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Docker.docker.react: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker/frontend/Dockerfile build.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.frontend/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ParaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;front-test&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Java/AFAFI - GIT&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.tailwindcss&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.ParaApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.docker.react: Compose Deployment.executor": "Run",
+    "Docker.docker/frontend/Dockerfile build.executor": "Run",
+    "Docker.docker: Compose Deployment.executor": "Run",
+    "Docker.frontend/Dockerfile.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ParaApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "front-test",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Desktop/Java/AFAFI - GIT",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.start.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.tailwindcss",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\Java\Para\docker\backend" />
@@ -176,9 +186,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ParaApplication" />
-        <item itemvalue="Docker.docker/frontend/Dockerfile build" />
-        <item itemvalue="Docker.docker: Compose Deployment" />
+        <item itemvalue="Spring Boot.ParaApplication" />
         <item itemvalue="Docker.frontend/Dockerfile" />
+        <item itemvalue="Docker.docker: Compose Deployment" />
+        <item itemvalue="Docker.docker/frontend/Dockerfile build" />
       </list>
     </recent_temporary>
   </component>
@@ -207,6 +218,7 @@
       <workItem from="1703882670355" duration="315000" />
       <workItem from="1704394917970" duration="6061000" />
       <workItem from="1704480884024" duration="985000" />
+      <workItem from="1705258834717" duration="13114000" />
     </task>
     <task id="LOCAL-00001" summary="working login demo">
       <created>1700759450337</created>
@@ -308,27 +320,6 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -340,6 +331,27 @@
                 </option>
               </RecentGroup>
             </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="front" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

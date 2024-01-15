@@ -2,19 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.price-slider {
-    margin-bottom: 20px;
-}
-
-.sort-panel {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #fff;
+    background-color: var(--section_background);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,11 +16,41 @@
 
 .price-slider-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
 
+.sort-panel label {
+    color: var(--primary-text-color);
+}
+
+
+
 #price-slider {
     margin: 0 15px;
     flex-grow: 1;
+    width: 100%;
+}
+
+
+@media (max-width: 600px) {
+    .sort-panel {
+        padding: 10px;
+    }
+
+    .search-bar,
+    .genre-select,
+    .price-input,
+    #price-slider {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+
+    .price-label {
+        margin-bottom: 10px;
+    }
+
+
 }

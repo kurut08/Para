@@ -1,31 +1,63 @@
+.game-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 .game-item {
     display: flex;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
     margin: 10px;
+    width: 100%;
 }
 
 .game-image {
     width: 100px;
     margin-right: 20px;
+    border-radius: 5px;
 }
 
 .game-info {
     flex-grow: 1;
+    text-align: left;
 }
 
 .game-title {
     margin: 0;
+    color: var(--primary-text-color);
     font-size: 1.2em;
 }
 
 .game-release-date {
-    margin: 0;
-    color: #666;
+    margin: 5px 0;
+    color: var(--secondary-text-color);
 }
 
 .game-price {
     margin: 0;
+    color: var(--accent-color);
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .game-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .game-image {
+        width: 80px;
+    }
+
+    .game-title {
+        font-size: 1em;
+    }
+
+    .game-info {
+        text-align: center;
+        width: 100%;
+    }
 }

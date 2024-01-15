@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './SortPanel.css';
 
 const SortPanel = ({ onGenreChange, onMaxPriceChange, onSearch }) => {
-    const [sliderValue, setSliderValue] = useState(1000);
+    const [sliderValue, setSliderValue] = useState(200);
 
-    const handleSliderChange = (value) => {
+    const handleSliderChange = (event) => {
+        const value = event.target.valueAsNumber || event.target.value;
         setSliderValue(value);
         onMaxPriceChange(value);
     };
@@ -31,22 +32,14 @@ const SortPanel = ({ onGenreChange, onMaxPriceChange, onSearch }) => {
                 <option value="Survival">Survival</option>
             </select>
             <div className="price-slider-container">
-                <label htmlFor="price-slider">Max Price: {sliderValue}$</label>
+                <label htmlFor="price-slider" className="price-label">Max Price: {sliderValue}$</label>
                 <input
                     type="range"
                     id="price-slider"
                     min="0"
-                    max="1000"
+                    max="200"
                     value={sliderValue}
-                    onChange={e => handleSliderChange(e.target.value)}
-                />
-                <input
-                    type="number"
-                    className="price-input"
-                    value={sliderValue}
-                    onChange={e => handleSliderChange(e.target.value)}
-                    min="0"
-                    max="1000"
+                    onChange={handleSliderChange}
                 />
             </div>
         </div>

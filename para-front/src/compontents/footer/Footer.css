@@ -1,12 +1,11 @@
 .footer {
-    position: absolute;
     height: 7%;
     width: 100%;
-    color: #ee0808;
-    margin-top: auto;
+    color: var(--primary-text-color);
     background-color: var(--footer_background);
 }
+
 .footer-text {
-    text-align: right; /* Align the text to the right */
+    text-align: right;
     padding: 1%;
 }
