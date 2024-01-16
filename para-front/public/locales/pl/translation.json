@@ -1,0 +1,63 @@
+{
+  "store.label": "Sklep",
+  "library.label": "Biblioteka",
+  "profile.label": "Profil",
+
+  "login.label": "Logowanie",
+  "username.label": "Nick",
+  "enterUsername.label": "Wpisz nick",
+  "password.label": "Hasło",
+  "enterPassword.label": "Wpisz hasło",
+  "email.label": "Email",
+  "enterEmail.label": "Wpisz email",
+
+  "register.label": "Rejestracja",
+  "userRegistration.label": "Rejestracja użytkownika",
+  "registerAndVerify.label": "Zarejestruj i zweryfikuj email",
+  "registerSuccessful.label": "Rejestracja zakończona sukcesem! Sprawdź swój email!",
+
+  "verify.label": "Zweryfikuj!",
+  "verificationSuccessful.label": "Weryfikacja zakończona sukcesem!",
+  "verificationSuccessfulLogIn.label": "Weryfikacja zakończona sukcesem! Teraz możesz się zalogować!",
+
+
+  "loginUsernameNotExists.label": "Użytkownik nie istnieje",
+  "credentialsDontMatch.label": "Podane login i hasło nie pasują do siebie",
+
+  "addGame.label": "Dodaj grę",
+  "gameAdded.label": "Gra została dodana",
+  "gameAddingError.label": "Nastąpił błąd w trakcie dodawania gry",
+  "gameDeleted.label": "Gra została usunięta",
+  "title.label": "Tytuł",
+  "enterTitle.label": "Wpisz tytuł",
+  "description.label": "Opis",
+  "enterDescription.label": "Wpisz opis",
+  "price.label": "Cena",
+  "enterPrice.label": "Wpisz cenę",
+  "genre.label": "Gatunek",
+  "enterGenre.label": "Wpisz gatunek",
+  "add.label": "Dodaj",
+  "deleteGame.label": "Usuń grę",
+  "id.label": "id",
+  "enterId.label": "Wpisz id",
+  "delete.label": "Usuń",
+
+
+  "searchByTitle.label": "Wyszukaj według tytułu",
+  "selectGenre.label": "Wybierz gatunek",
+  "actionGenre.label": "Akcja",
+  "adventureGenre.label": "Przygodówki",
+  "baseBuildingGenre.label": "Base buildery",
+  "cityBuilderGenre.label": "City buildery",
+  "fpsGenre.label": "FPS",
+  "idleGenre.label": "Idle",
+  "rpgGenre.label": "RPG",
+  "simulationGenre.label": "Symulacje",
+  "sportsRacingGenre.label": "Sport & Wyścigi",
+  "strategyGenre.label": "Strategia",
+  "survivalGenre.label": "Przetrwanie",
+
+  "maxPrice.label": "Maksymalna cena"
+
+
+}
