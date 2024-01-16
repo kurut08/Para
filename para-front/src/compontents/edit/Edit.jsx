@@ -1,6 +1,7 @@
 import axios from "axios";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Edit(){
     const [title, setTitle] = useState("");
@@ -8,6 +9,7 @@ function Edit(){
     const [price, setPrice] = useState("");
     const [genres, setGenres] = useState("");
     const [id, setId] = useState("");
+    const { t, i18n } = useTranslation();
 
     async function addGame(event) {
         event.preventDefault();
@@ -19,10 +21,10 @@ function Edit(){
                 genres: genres
             }).then((res) =>
             {
-                alert("Added game");
+                alert(t("gameAdded.label"));
             }, fail => {
                 console.error(fail); // Error!
-                alert("KEK");
+                alert(t("gameAddingError.label"));
             });
         }
         catch (err) {
@@ -36,7 +38,7 @@ function Edit(){
         try {
             await axios.post("http://localhost:8080/auth/delgame"+{id}, {mode:'cors'}).then((res) =>
             {
-                alert("Deleted game");
+                alert(t("gameDeleted.label"));
             }, fail => {
                 console.error(fail); // Error!
             });
@@ -49,7 +51,7 @@ function Edit(){
         <div>
             <div className="container">
                 <div className="row">
-                    <h2>Add Game</h2>
+                    <h2>{t("addGame.label")}</h2>
                     <hr/>
                 </div>
 
@@ -58,8 +60,8 @@ function Edit(){
 
                         <form>
                             <div className="form-group">
-                                <label>Title</label>
-                                <input type="text"  className="form-control" id="title" placeholder="Enter title"
+                                <label>{t("title.label")}</label>
+                                <input type="text"  className="form-control" id="title" placeholder={t("enterTitle.label")}
                                        value={title}
                                        onChange={(event) => {
                                            setTitle(event.target.value);
@@ -67,8 +69,8 @@ function Edit(){
                                 />
                             </div>
                             <div className="form-group">
-                                <label>Description</label>
-                                <input type="text" className="form-control" id="description" placeholder="Enter description"
+                                <label>{t("description.label")}</label>
+                                <input type="text" className="form-control" id="description" placeholder={t("enterDescription.label")}
                                        value={description}
                                        onChange={(event) => {
                                            setDescription(event.target.value);
@@ -76,8 +78,8 @@ function Edit(){
                                 />
                             </div>
                             <div className="form-group">
-                                <label>Price</label>
-                                <input type="number" className="form-control" id="price" placeholder="Enter price"
+                                <label>{t("price.label")}</label>
+                                <input type="number" className="form-control" id="price" placeholder={t("enterPrice.label")}
                                        value={price}
                                        onChange={(event) => {
                                            setPrice(event.target.value);
@@ -85,28 +87,28 @@ function Edit(){
                                 />
                             </div>
                             <div className="form-group">
-                                <label>Genres</label>
-                                <input type="text" className="form-control" id="genres" placeholder="Enter genres"
+                                <label>{t("genre.label")}</label>
+                                <input type="text" className="form-control" id="genres" placeholder={t("enterGenre.label")}
                                        value={genres}
                                        onChange={(event) => {
                                            setGenres(event.target.value);
                                        }}
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary" onClick={addGame} >Add</button>
+                            <button type="submit" className="btn btn-primary" onClick={addGame} >{t("add.label")}</button>
                         </form>
-                        <h2>Delete Game</h2>
+                        <h2>{t("deleteGame.label")}</h2>
                         <form>
                             <div className="form-group">
-                                <label>Id</label>
-                                <input type="text" className="form-control" id="id" placeholder="Enter id"
+                                <label>{t("id.label")}</label>
+                                <input type="text" className="form-control" id="id" placeholder={t("enterId.label")}
                                        value={id}
                                        onChange={(event) => {
                                            setId(event.target.value);
                                        }}
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary" onClick={delGame}>Delete</button>
+                            <button type="submit" className="btn btn-primary" onClick={delGame}>{t("delete.label")}</button>
                         </form>
                     </div>
                 </div>
