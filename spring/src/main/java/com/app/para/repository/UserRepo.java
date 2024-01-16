@@ -10,6 +10,7 @@ import com.app.para.models.ApplicationUser;
 
 @Repository
 public interface UserRepo extends JpaRepository<ApplicationUser, Integer> {
+    @Query("SELECT u FROM ApplicationUser u WHERE u.username = :username")
     Optional<ApplicationUser> findByUsername(String username);
    @Query(name = ApplicationUser.FIND_BY_VERIFICATION_CODE)
     ApplicationUser findByVerificationCode(@Param("code") String code);
