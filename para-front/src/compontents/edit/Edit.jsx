@@ -12,7 +12,7 @@ function Edit(){
     async function addGame(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/auth/addgame", {
+            await axios.post("http://localhost:8080/auth/addGame", {
                 title: title,
                 description: description,
                 price: price,
@@ -34,7 +34,8 @@ function Edit(){
     async function delGame(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/auth/delgame"+{id}, {mode:'cors'}).then((res) =>
+            console.log(id);
+            await axios.post("http://localhost:8080/auth/deleteGame/"+ id, {mode:'cors'}).then((res) =>
             {
                 alert("Deleted game");
             }, fail => {
