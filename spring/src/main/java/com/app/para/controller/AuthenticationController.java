@@ -84,6 +84,11 @@ public class AuthenticationController {
     public ResponseEntity<Optional<List<Game_Review>>> getReviews(@PathVariable Integer gameId){
         return new ResponseEntity<>(gameReviewService.findReviewsByGameId(gameId), HttpStatus.OK);
     }
+    @PostMapping("/reviews/{gameId}/add")
+    public ResponseEntity<String> addReviews(@PathVariable Integer id, @RequestBody String text, boolean isOk){
+        gameReviewService.addGameReview(id, isOk, text);
+        return new ResponseEntity<>("Added Review", HttpStatus.OK);
+    }
     @RequestMapping("/user/createInvite")
     public ResponseEntity<String> createInvite(@RequestBody Invite invite){
         friendsService.createInvite(invite.getUserFrom(), invite.getUserTo());
@@ -111,13 +116,13 @@ public class AuthenticationController {
     public ResponseEntity<UserDetails> getProfile(@PathVariable String username){
         return new ResponseEntity<>(userService.loadUserByUsername(username), HttpStatus.OK);
     }
-    @PostMapping("/admin/addGame")
+    @PostMapping("/addGame")
     public ResponseEntity<String> addGame(@RequestBody Game game){
         gameService.addGame(game.getTitle(), game.getDescription(), game.getPrice(), game.getGenre());
         return new ResponseEntity<>("Added game", HttpStatus.OK);
     }
-    @RequestMapping("/admin/deleteGame/{id}")
-    public ResponseEntity<String> deleteGame(@PathVariable("id")Integer id) {
+    @RequestMapping("/deleteGame/{id}")
+    public ResponseEntity<String> deleteGame(@PathVariable Integer id) {
         gameService.deleteById(id);
         return new ResponseEntity<>("DELETED", HttpStatus.OK);
     }

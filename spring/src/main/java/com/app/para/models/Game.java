@@ -15,12 +15,11 @@ public class Game {
     @Column(nullable = false)
     private Float price;
     private String genre;
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(nullable = true, columnDefinition = "TEXT")
     private String url;
 
-    public Game(int id, String title, String description, Float price, String genre) {
+    public Game(String title, String description, Float price, String genre) {
         super();
-        this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;

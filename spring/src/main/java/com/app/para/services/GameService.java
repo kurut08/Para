@@ -14,7 +14,7 @@ public class GameService {
     private GameRepo gameRepo;
 
     public Game addGame(String title, String description, Float price, String genres) {
-        return gameRepo.save(new Game(0, title, description, price, genres));
+        return gameRepo.save(new Game(title, description, price, genres));
     }
 
     public List<Game> getAllGames(){

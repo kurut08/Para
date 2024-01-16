@@ -19,7 +19,7 @@ function Library(){
                 navigate("/home");
             }
             else{
-                const response = await fetch(URL+user.user.userId).then((response) => response.json());
+                const response = await fetch(URL+user.user.userId,  {mode:'cors'}).then((response) => response.json());
                 console.log({ response });
                 setGames(response);
             }

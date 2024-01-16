@@ -71,7 +71,7 @@ function Login() {
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input
-                            type="email"
+                            type="text"
                             id="username"
                             placeholder="Enter Username"
                             value={username}
