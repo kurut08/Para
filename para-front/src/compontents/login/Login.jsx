@@ -5,9 +5,10 @@ import {Toggle} from '../toggle/Toggle';
 import {Footer} from '../footer/Footer';
 import './Login.css';
 import { isEmpty } from "validator";
-
+import { useTranslation } from "react-i18next";
 
 function Login() {
+    const { t, i18n } = useTranslation();
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -28,7 +29,7 @@ function Login() {
 
                 if (res.data.message === "Username not exits")
                 {
-                    alert("Username not exits");
+                    alert(t("loginUsernameNotExists.label"));
                 }
                 else if(!isEmpty(res.data.jwt))
                 {
@@ -37,7 +38,7 @@ function Login() {
                 }
                 else
                 {
-                    alert("Given credentials does not match");
+                    alert(t("credentialsDontMatch.label"));
                 }
             }, fail => {
                 console.error(fail); // Error!
@@ -65,30 +66,30 @@ function Login() {
                 </div>
             </header>
             <main className="login-main">
-                <h2>Login</h2>
+                <h2>{t("login.label")}</h2>
                 <hr />
                 <form onSubmit={login} className="login-form">
                     <div className="form-group">
-                        <label htmlFor="username">Username</label>
+                        <label htmlFor="username">{t("username.label")}</label>
                         <input
                             type="text"
                             id="username"
-                            placeholder="Enter Username"
+                            placeholder={t("enterUsername.label")}
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">{t("password.label")}</label>
                         <input
                             type="password"
                             id="password"
-                            placeholder="Enter Password"
+                            placeholder={t("enterPassword.label")}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">Login</button>
+                    <button type="submit" className="btn btn-primary">{t("login.label")}</button>
                 </form>
             </main>
             <Footer />

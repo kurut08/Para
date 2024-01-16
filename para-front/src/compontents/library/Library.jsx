@@ -33,12 +33,16 @@ function Library(){
     useEffect(() => {
         getGames();
     }, []);
-    return(
-        <div>
-            <h1>Library page</h1>
-            <h2>ID USERA:{user.user.userId}</h2>
-            PRINTOWANIE GIER
-        </div>
-    )
+    if(user != null)
+    {
+        return(
+            <div>
+                <h1>Library page</h1>
+                <h2>ID USERA:{user.user.userId}</h2>
+                PRINTOWANIE GIER
+            </div>
+        )
+    }
+
 }
 export default Library;
