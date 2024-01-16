@@ -15,7 +15,7 @@ public class Game {
     @Column(nullable = false)
     private Float price;
     private String genre;
-    @Column(nullable = true, columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT")
     private String url;
 
     public Game(String title, String description, Float price, String genre) {

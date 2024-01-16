@@ -2,17 +2,15 @@ package com.app.para.controller;
 
 import com.app.para.models.*;
 import com.app.para.services.*;
-import com.app.para.services.TokenService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.mail.MessagingException;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -37,6 +35,8 @@ public class AuthenticationController {
     private UserService userService;
     @Autowired
     private GameReviewService gameReviewService;
+    @Autowired
+    private OrderService orderService;
     @PostMapping("/register_email")
     public String processRegister(@RequestBody RegistrationDTO body, HttpServletRequest request) throws UnsupportedEncodingException, MessagingException {
         authenticationService.register(body.getEmail(), body.getUsername(), body.getPassword(), getSiteURL(request));
@@ -89,7 +89,7 @@ public class AuthenticationController {
         gameReviewService.addGameReview(id, isOk, text);
         return new ResponseEntity<>("Added Review", HttpStatus.OK);
     }
-    @RequestMapping("/user/createInvite")
+    @PostMapping("/user/createInvite")
     public ResponseEntity<String> createInvite(@RequestBody Invite invite){
         friendsService.createInvite(invite.getUserFrom(), invite.getUserTo());
         return new ResponseEntity<>("Request sent", HttpStatus.OK);
@@ -108,8 +108,8 @@ public class AuthenticationController {
         return new ResponseEntity<>(friendsService.getAllFriends(id), HttpStatus.OK);
     }
     @GetMapping("/user/deleteFriend/{id}")
-    public ResponseEntity<String> deleteFriend(@PathVariable Integer id, @RequestBody ApplicationUser user){
-        friendsService.deleteFriends(id, user.getUserId());
+    public ResponseEntity<String> deleteFriend(@PathVariable Integer id, @RequestBody Integer friendId){
+        friendsService.deleteFriends(id, friendId);
         return new ResponseEntity<>("Friend deleted!", HttpStatus.OK);
     }
     @GetMapping("/profile/{username}")
@@ -121,10 +121,21 @@ public class AuthenticationController {
         gameService.addGame(game.getTitle(), game.getDescription(), game.getPrice(), game.getGenre());
         return new ResponseEntity<>("Added game", HttpStatus.OK);
     }
-    @RequestMapping("/deleteGame/{id}")
+    @PostMapping("/deleteGame/{id}")
     public ResponseEntity<String> deleteGame(@PathVariable Integer id) {
         gameService.deleteById(id);
         return new ResponseEntity<>("DELETED", HttpStatus.OK);
+    }
+    @GetMapping("/order/{id}")
+    public ResponseEntity<Optional<List<Order>>> myOrders(@PathVariable Integer id){
+        return new ResponseEntity<>(orderService.getAllMyOrders(id), HttpStatus.OK);
+    }
+    @PostMapping("/orderNew")
+    public ResponseEntity<String> newOrder(@RequestBody String user) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        HelpOrder helpOrder = mapper.reader().forType(HelpOrder.class).readValue(user);
+        orderService.newOrder(helpOrder.getUserId(), helpOrder.getGameId());
+        return new ResponseEntity<>("Order Placed!", HttpStatus.OK);
     }
 }
 // TODO FIX MAPPING IN EVERY FUNCTION FOR USERS AND ADMIN
