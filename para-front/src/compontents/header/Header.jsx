@@ -5,8 +5,10 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import {NavLink} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+    const { t, i18n } = useTranslation();
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
@@ -21,11 +23,11 @@ const Header = () => {
                         style={{maxHeight: '100px'}}
                         navbarScroll
                     >
-                        <NavLink className ="nav-link" to="/">Shop</NavLink>
-                        <NavLink className ="nav-link" to="/Profile">Profile</NavLink>
+                        <NavLink className ="nav-link" to="/">{t("store.label")}</NavLink>
+                        <NavLink className ="nav-link" to="/Profile">{t("profile.label")}</NavLink>
                     </Nav>
-                    <Button variant="outline-info" className="me-2">Login</Button>
-                    <Button variant="outline-info">Register</Button>
+                    <Button variant="outline-info" className="me-2">{t("login.label")}</Button>
+                    <Button variant="outline-info">{t("register.label")}</Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

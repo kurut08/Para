@@ -1,0 +1,63 @@
+{
+  "store.label": "Store",
+  "library.label": "Library",
+  "profile.label": "Profile",
+
+  "login.label": "Login",
+  "username.label": "Username",
+  "enterUsername.label": "Enter username",
+  "password.label": "Password",
+  "enterPassword.label": "Enter password",
+  "email.label": "Email",
+  "enterEmail.label": "Enter email",
+
+  "register.label": "Register",
+  "userRegistration.label": "User registration",
+  "registerAndVerify.label": "Register and verify your email",
+  "registerSuccessful.label": "Registation Successful! Check your email!",
+
+  "verify.label": "Verify!",
+  "verificationSuccessful.label": "Verification successful!",
+  "verificationSuccessfulLogIn.label": "Verification successful! Now you can log in!",
+
+
+  "loginUsernameNotExists.label": "Username doesn't exist",
+  "credentialsDontMatch.label": "Given credentials do not match",
+
+  "addGame.label": "Add game",
+  "gameAdded.label": "Game added",
+  "gameAddingError.label": "An error has occured while trying to add your game",
+  "gameDeleted.label": "Game deleted",
+  "title.label": "Title",
+  "enterTitle.label": "Enter title",
+  "description.label": "Description",
+  "enterDescription.label": "Enter description",
+  "price.label": "Price",
+  "enterPrice.label": "Enter price",
+  "genre.label": "Genre",
+  "enterGenre.label": "Enter genre",
+  "add.label": "Add",
+  "deleteGame.label": "Delete game",
+  "id.label": "id",
+  "enterId.label": "Enter id",
+  "delete.label": "Delete",
+
+
+  "searchByTitle.label": "Search by title...",
+  "selectGenre.label": "Select genre",
+  "actionGenre.label": "Action",
+  "adventureGenre.label": "Adventure",
+  "baseBuildingGenre.label": "Base Building",
+  "cityBuilderGenre.label": "City building",
+  "fpsGenre.label": "FPS",
+  "idleGenre.label": "Idle",
+  "rpgGenre.label": "RPG",
+  "simulationGenre.label": "Simulation",
+  "sportsRacingGenre.label": "Sports & Racing",
+  "strategyGenre.label": "Strategy",
+  "survivalGenre.label": "Survival",
+
+  "maxPrice.label": "Max price"
+
+
+}
