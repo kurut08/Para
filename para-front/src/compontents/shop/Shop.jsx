@@ -66,6 +66,13 @@ function Shop(){
     const navigateToHome = () => {
         navigate('/');
     };
+
+    const navigateToProfile = () => {
+        navigate('/profile');
+    };
+
+
+    if(userString != null){
     return(
         <div className="shop">
             <div className="logo-container">
@@ -96,6 +103,33 @@ function Shop(){
             <Footer/>
         </div>
     )
+    }else{
+    return(
+        <div className="shop">
+            <div className="logo-container">
+                <div onClick={navigateToHome}>
+                    <img src="/path/to/your/logo.png" alt="App Logo" className="app-logo"/>
+                </div>
+                <div className="user-container">
+
+                </div>
+                <div className="switch-container">
+                    <Toggle/>
+                </div>
+            </div>
+            <div className="content-shop">
+                <div className="sort">
+                    <SortPanel
+                        onSearch={setSearchTerm}
+                        onGenreChange={setSelectedGenre}
+                        onMaxPriceChange={price => setMaxPrice(Number(price))}
+                    />
+                </div>
+                <GameList games={filteredGames}/>
+            </div>
+            <Footer/>
+        </div>
+    )}
 }
 
 export default Shop;
