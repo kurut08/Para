@@ -90,10 +90,6 @@ public class Game {
         this.genre = genre;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public int getSteamId() {
         return steamId;
     }
