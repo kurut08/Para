@@ -3,6 +3,7 @@
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--main_background);
+    color: var(--primary-text-color);
 }
 
 .login-header {
@@ -26,11 +27,26 @@
     justify-content: center;
     padding: 1rem;
 }
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--section_background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
 
 .login-form {
     width: 100%;
     max-width: 320px;
     margin: auto;
+}
+
+.login-card h1 {
+    color: var(--primary-text-color);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .form-group {
@@ -39,7 +55,7 @@
 
 .form-group label {
     display: block;
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
     margin-bottom: .5rem;
 }
 
@@ -75,6 +91,9 @@
 
 .btn:active {
     background-color: var(--toggle-bg);
+}
+.reg{
+    color: var(--primary-text-color);
 }
 
 @media (max-width: 768px) {

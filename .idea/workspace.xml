@@ -5,26 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added Services">
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/profile/Profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/SampleDataFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/SampleDataFiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/ApplicationUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/ApplicationUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Friends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game_Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Game_Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/models/Invite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/FriendsRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameLibraryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameLibraryRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameReviewRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/GameReviewRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/InviteRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/InviteRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/repository/UserRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/FriendsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/FriendsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameLibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameLibraryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/app/para/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/public/locales/pl/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/public/locales/pl/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/login/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/register/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/register/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/register/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/register/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +38,9 @@
         <option value="HTML File" />
         <option value="Dockerfile" />
         <option value="Interface" />
-        <option value="CSS File" />
         <option value="Class" />
+        <option value="package.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -236,6 +234,7 @@
       <workItem from="1704480884024" duration="985000" />
       <workItem from="1705258834717" duration="13547000" />
       <workItem from="1705308227635" duration="4646000" />
+      <workItem from="1705485744550" duration="12618000" />
     </task>
     <task id="LOCAL-00001" summary="working login demo">
       <created>1700759450337</created>
@@ -345,6 +344,21 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -362,21 +376,6 @@
                 </map>
               </option>
             </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
           </value>
         </entry>
       </map>

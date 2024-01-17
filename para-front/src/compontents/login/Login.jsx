@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from "axios";
 import {Toggle} from '../toggle/Toggle';
 import {Footer} from '../footer/Footer';
@@ -34,7 +34,7 @@ function Login() {
                 else if(!isEmpty(res.data.jwt))
                 {
                     localStorage.setItem("user", JSON.stringify(res.data))
-                    navigate('/shop');
+                    navigate('/home');
                 }
                 else
                 {
@@ -66,31 +66,36 @@ function Login() {
                 </div>
             </header>
             <main className="login-main">
-                <h2>{t("login.label")}</h2>
-                <hr />
-                <form onSubmit={login} className="login-form">
-                    <div className="form-group">
-                        <label htmlFor="username">{t("username.label")}</label>
-                        <input
-                            type="text"
-                            id="username"
-                            placeholder={t("enterUsername.label")}
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">{t("password.label")}</label>
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder={t("enterPassword.label")}
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-primary">{t("login.label")}</button>
-                </form>
+                <div className="login-card">
+                    <h1>{t("login.label")}</h1>
+                    <hr />
+                    <form onSubmit={login} className="login-form">
+                        <div className="form-group">
+                            <label htmlFor="username">{t("username.label")}</label>
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder={t("enterUsername.label")}
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password">{t("password.label")}</label>
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder={t("enterPassword.label")}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
+                        <button type="submit" className="btn btn-primary">{t("login.label")}</button>
+                        <Link to={'/register'}>
+                        <h5 className="reg">Register</h5>
+                        </Link>
+                    </form>
+                </div>
             </main>
             <Footer />
         </div>

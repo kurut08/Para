@@ -50,7 +50,8 @@ function Register() {
                     <form>
                         <div className="form-group">
                             <label>{t("username.label")}:</label>
-                            <input type="text" className="form-control" id="username" placeholder={t("enterUsername.label")}
+                            <input type="text" className="form-control" id="username"
+                                   placeholder={t("enterUsername.label")}
 
                                    value={username}
                                    onChange={(event) => {
@@ -63,19 +64,17 @@ function Register() {
                         <div className="form-group">
                             <label>{t("email.label")}</label>
                             <input type="email" className="form-control" id="email" placeholder={t("enterEmail.label")}
-
                                    value={email}
                                    onChange={(event) => {
                                        setEmail(event.target.value);
                                    }}
-
                             />
 
                         </div>
-
                         <div className="form-group">
                             <label>{t("password.label")}</label>
-                            <input type="password" className="form-control" id="password" placeholder={t("enterPassword.label")}
+                            <input type="password" className="form-control" id="password"
+                                   placeholder={t("enterPassword.label")}
 
                                    value={password}
                                    onChange={(event) => {
@@ -84,8 +83,8 @@ function Register() {
 
                             />
                         </div>
-
-                        <button type="submit" className="btn btn-primary mt-4" onClick={save}>{t("registerAndVerify.label")}
+                        <button type="submit" className="btn btn-primary mt-4"
+                                onClick={save}>{t("registerAndVerify.label")}
                         </button>
 
                     </form>

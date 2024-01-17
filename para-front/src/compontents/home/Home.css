@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 30px;
+    margin: 5% 10%;
     border: 2px solid var(--border-color);
     border-radius: 10px;
     padding: 20px;
@@ -44,6 +44,16 @@
     flex-grow: 1;
     min-height: 400px;
     width: 33%;
+}
+
+.profile-image{
+    width: calc(33.33% - 10px);
+    height: 120px;
+    background-color: var(--section_background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 
@@ -80,22 +90,65 @@
 
 
 .store-section,
-.library-section,
-.profile-section {
+.profile-section,
+.login-section{
     background-color: var(--section_background);
     height: 100%;
 }
 
 .section-container:hover {
-    height: 65%;
-    width: 45%;
-    margin: 40px;
+    width: 36%;
+    margin: 5% 8%;
 }
 
 .switch-container {
     margin-right: 20px;
     margin-left: auto;
     align-content: flex-end;
+}
+
+.section-container.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-top: 10%;
+}
+
+.profile-image {
+    margin-right: 20px;
+    width: 170px;
+    height: 140px;
+    background-color: var(--section_background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.profile-username {
+    margin-left: 5%;
+}
+
+.logreg{
+    width: 100px;
+
+    color: var(--primary-text-color);
+}
+.login-section{
+    align-items: center;
+
 }
 
 
