@@ -44,7 +44,15 @@ public class Game_Review
         this.type = type;
         this.text = text;
     }
-
+    public Game_Review(Integer id, Boolean type, String text, ApplicationUser user, Game game)
+    {
+        super();
+        this.id = id;
+        this.type = type;
+        this.text = text;
+        this.user = user;
+        this.game = game;
+    }
     public Integer getId() { return this.id; }
     public void setId(Integer gameReviewId) {this.id = gameReviewId; }
 

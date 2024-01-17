@@ -3,6 +3,7 @@ package com.app.para.controller;
 import com.app.para.models.*;
 import com.app.para.services.*;
 import com.app.para.services.TokenService;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.mail.MessagingException;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.servlet.http.HttpServletRequest;
@@ -84,9 +85,9 @@ public class AuthenticationController {
     public ResponseEntity<Optional<List<Game_Review>>> getReviews(@PathVariable Integer gameId){
         return new ResponseEntity<>(gameReviewService.findReviewsByGameId(gameId), HttpStatus.OK);
     }
-    @PostMapping("/reviews/{gameId}/add")
-    public ResponseEntity<String> addReviews(@PathVariable Integer id, @RequestBody String text, boolean isOk){
-        gameReviewService.addGameReview(id, isOk, text);
+    @PostMapping("/reviews/{id}/add")
+    public ResponseEntity<String> addReviews(@PathVariable Integer id, @RequestBody ObjectNode json){
+        gameReviewService.addGameReview(id, json.get("isOk").asBoolean(), json.get("text").toString());
         return new ResponseEntity<>("Added Review", HttpStatus.OK);
     }
     @RequestMapping("/user/createInvite")
@@ -127,4 +128,3 @@ public class AuthenticationController {
         return new ResponseEntity<>("DELETED", HttpStatus.OK);
     }
 }
-// TODO FIX MAPPING IN EVERY FUNCTION FOR USERS AND ADMIN
