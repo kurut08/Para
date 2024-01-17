@@ -8,13 +8,13 @@ public class Invite {
     private int id;
     @JoinColumn(name = "user_from", referencedColumnName = "user_id")
     @Column(nullable = false)
-    private ApplicationUser userFrom;
+    private int userFrom;
     @JoinColumn(name = "user_to", referencedColumnName = "user_id")
     @Column(nullable = false)
-    private ApplicationUser userTo;
+    private int userTo;
     boolean status;
 
-    public Invite(ApplicationUser userFrom, ApplicationUser userTo) {
+    public Invite(int userFrom, int userTo) {
         super();
         this.userFrom = userFrom;
         this.userTo = userTo;
@@ -32,19 +32,19 @@ public class Invite {
         this.id = inviteId;
     }
 
-    public ApplicationUser getUserFrom() {
+    public int getUserFrom() {
         return userFrom;
     }
 
-    public void setUserFrom(ApplicationUser userFrom) {
+    public void setUserFrom(int userFrom) {
         this.userFrom = userFrom;
     }
 
-    public ApplicationUser getUserTo() {
+    public int getUserTo() {
         return userTo;
     }
 
-    public void setUserTo(ApplicationUser userTo) {
+    public void setUserTo(int userTo) {
         this.userTo = userTo;
     }
 

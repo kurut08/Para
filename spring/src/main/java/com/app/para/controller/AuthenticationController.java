@@ -2,17 +2,15 @@ package com.app.para.controller;
 
 import com.app.para.models.*;
 import com.app.para.services.*;
-import com.app.para.services.TokenService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.mail.MessagingException;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -37,6 +35,8 @@ public class AuthenticationController {
     private UserService userService;
     @Autowired
     private GameReviewService gameReviewService;
+    @Autowired
+    private OrderService orderService;
     @PostMapping("/register_email")
     public String processRegister(@RequestBody RegistrationDTO body, HttpServletRequest request) throws UnsupportedEncodingException, MessagingException {
         authenticationService.register(body.getEmail(), body.getUsername(), body.getPassword(), getSiteURL(request));
@@ -81,17 +81,21 @@ public class AuthenticationController {
         return new ResponseEntity<>(gameLibraryService.getAllMyGames(id), HttpStatus.OK);
     }
     @GetMapping("/reviews/{gameId}")
-    public ResponseEntity<Optional<List<Game_Review>>> getReviews(@PathVariable Integer gameId){
-        return new ResponseEntity<>(gameReviewService.findReviewsByGameId(gameId), HttpStatus.OK);
+    public ResponseEntity<List<Game_Review>> getReviews(@PathVariable Integer gameId){
+        return new ResponseEntity<>(gameReviewService.findByGameId(gameId), HttpStatus.OK);
     }
     @PostMapping("/reviews/{gameId}/add")
-    public ResponseEntity<String> addReviews(@PathVariable Integer id, @RequestBody String text, boolean isOk){
-        gameReviewService.addGameReview(id, isOk, text);
+    public ResponseEntity<String> addReviews(@PathVariable Integer gameId, @RequestBody String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        GLAuth glAuth = mapper.reader().forType(GLAuth.class).readValue(json);
+        gameReviewService.addGameReview(gameId, Integer.valueOf(glAuth.getId()), Boolean.parseBoolean(glAuth.getOk()), glAuth.getText() );
         return new ResponseEntity<>("Added Review", HttpStatus.OK);
     }
-    @RequestMapping("/user/createInvite")
-    public ResponseEntity<String> createInvite(@RequestBody Invite invite){
-        friendsService.createInvite(invite.getUserFrom(), invite.getUserTo());
+    @PostMapping("/user/createInvite")
+    public ResponseEntity<String> createInvite(@RequestBody String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        InviteHelp inviteHelp = mapper.reader().forType(InviteHelp.class).readValue(json);
+        friendsService.createInvite(inviteHelp.getUserFrom(), inviteHelp.getUserTo());
         return new ResponseEntity<>("Request sent", HttpStatus.OK);
     }
     @GetMapping("/user/inviteList/{id}")
@@ -99,8 +103,11 @@ public class AuthenticationController {
         return new ResponseEntity<>(friendsService.getAllInvites(id), HttpStatus.OK);
     }
     @PostMapping("/user/acceptInvite/{id}")
-    public ResponseEntity<String> acceptInvite(@RequestBody Invite invite, boolean accept){
-        friendsService.acceptInvite(invite, accept);
+    public ResponseEntity<String> acceptInvite(@RequestBody String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        InviteHelp inviteHelp = mapper.reader().forType(InviteHelp.class).readValue(json);
+        friendsService.acceptInvite(Integer.parseInt(inviteHelp.getUserFrom()), Integer.parseInt(inviteHelp.getUserTo()), Boolean.parseBoolean(inviteHelp.getBool()));
+
         return new ResponseEntity<>("Request made!", HttpStatus.OK);
     }
     @GetMapping("/user/friendList/{id}")
@@ -108,8 +115,8 @@ public class AuthenticationController {
         return new ResponseEntity<>(friendsService.getAllFriends(id), HttpStatus.OK);
     }
     @GetMapping("/user/deleteFriend/{id}")
-    public ResponseEntity<String> deleteFriend(@PathVariable Integer id, @RequestBody ApplicationUser user){
-        friendsService.deleteFriends(id, user.getUserId());
+    public ResponseEntity<String> deleteFriend(@PathVariable Integer id, @RequestBody Integer friendId){
+        friendsService.deleteFriends(id, friendId);
         return new ResponseEntity<>("Friend deleted!", HttpStatus.OK);
     }
     @GetMapping("/profile/{username}")
@@ -121,7 +128,7 @@ public class AuthenticationController {
         gameService.addGame(game.getTitle(), game.getDescription(), game.getPrice(), game.getGenre());
         return new ResponseEntity<>("Added game", HttpStatus.OK);
     }
-    @RequestMapping("/deleteGame/{id}")
+    @PostMapping("/deleteGame/{id}")
     public ResponseEntity<String> deleteGame(@PathVariable Integer id) {
         gameService.deleteById(id);
         return new ResponseEntity<>("DELETED", HttpStatus.OK);

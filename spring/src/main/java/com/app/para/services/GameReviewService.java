@@ -1,25 +1,37 @@
 package com.app.para.services;
 
-import com.app.para.models.ApplicationUser;
-import com.app.para.models.Game;
+import com.app.para.models.GLHelp;
 import com.app.para.models.Game_Review;
+import com.app.para.repository.GLHelpRepo;
+import com.app.para.repository.GameRepo;
 import com.app.para.repository.GameReviewRepo;
+import com.app.para.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 @Service
 public class GameReviewService {
     @Autowired
     private GameReviewRepo gameReviewRepo;
+    @Autowired
+    private GameRepo gameRepo;
+    @Autowired
+    private UserRepo userRepo;
+    @Autowired
+    private GLHelpRepo glHelpRepo;
 
-    public Game_Review addGameReview(Integer id, boolean bool, String text)
+    public void addGameReview(Integer gameId, Integer userId, boolean bool, String text)
     {
-        return gameReviewRepo.save(new Game_Review(id, bool, text));
+        GLHelp glHelp = new GLHelp(bool, text);
+        glHelpRepo.save(glHelp);
+        gameReviewRepo.save(new Game_Review(glHelpRepo.findGLHelpById(glHelp.getId()), userRepo.findUserById(userId), gameRepo.findGameByGameId(gameId)));
     }
 
-    public Optional<List<Game_Review>> findReviewsByGameId(Integer gameId) {
-        return gameReviewRepo.findReviewById(gameId);
+    public List<Game_Review> findByGameId(Integer gameId) {
+        return gameReviewRepo.findByGameId(gameId);
     }
+
+
 }

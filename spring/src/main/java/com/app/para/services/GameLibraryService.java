@@ -1,4 +1,6 @@
 package com.app.para.services;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import com.app.para.repository.GameLibraryRepo;
@@ -27,7 +29,10 @@ public class GameLibraryService
     }
 
     public void buyGame(Integer userId, Integer gameID){
-        gameLibrary = new Game_Library(userRepo.findUserById(userId), gameRepo.findGameByGameId(gameID));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String date = localDateTime.format(formatter);
+        gameLibrary = new Game_Library(userRepo.getUserById(userId), gameRepo.findGameByGameId(gameID), date);
         gameRepoUser.save(gameLibrary);
     }
     public Optional<List<Game_Library>> getAllMyGames(Integer id){

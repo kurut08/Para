@@ -57,7 +57,23 @@
   "strategyGenre.label": "Strategy",
   "survivalGenre.label": "Survival",
 
-  "maxPrice.label": "Max price"
+  "maxPrice.label": "Max price",
+  "sendFriend.label": "Accept/Decline Invite",
+  "true.label": "Type: 'true' or 'false'",
+  "acceptInvite.label": "Accept or decline invite",
+  "enteruserTo.label": "Enter Id of your friend...",
+  "enteruserFrom.label": "Enter your Id...",
+  "yourid.label": "Your ID",
+  "friendid.label": "Friend's ID",
+  "sendinv.label": "Send invite ",
+  "usernameprofile.label": "Username: ",
+  "owngames.label": "Own games: ",
+  "owninvites.label": "Invite list: ",
+  "ownfriends.label": "Friend list: "
+
+
+
+
 
 
 }

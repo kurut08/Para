@@ -8,6 +8,9 @@ import com.app.para.repository.GameLibraryRepo;
 import com.app.para.repository.GameRepo;
 import com.app.para.repository.RoleRepo;
 import com.app.para.repository.UserRepo;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.Set;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -18,13 +21,15 @@ public class SampleDataFiller
     {
         if(roleRepository.findByAuthority("ADMIN").isPresent()) return;
         Role adminRole = roleRepository.save(new Role("ADMIN"));
-        roleRepository.save(new Role("USER"));
-
+        Role userRole = roleRepository.save(new Role("USER"));
         Set<Role> roles = new HashSet<>();
+        Set<Role> rolesUSer = new HashSet<>();
         roles.add(adminRole);
+        rolesUSer.add(userRole);
         ApplicationUser admin = new ApplicationUser(1, "admin@admin.com","admin", passwordEncode.encode("admin"), roles);
-
+        ApplicationUser user = new ApplicationUser(2, "user@user.com", "user", passwordEncode.encode("user"), rolesUSer);
         userRepository.save(admin);
+        userRepository.save(user);
 
         Game_Library gameLibrary = new Game_Library();
 
@@ -82,18 +87,23 @@ public class SampleDataFiller
                 "https://cdn.cloudflare.steamstatic.com/steam/apps/1238000/header.jpg?t=1661437203"
         };
 
-
+        int[] steamId = {526870,383870, 323190, 552520, 1222140, 1086940, 252490, 2207490, 1267910, 359550, 476600,
+                228200, 231430, 1677280, 47810, 1238040, 1222690, 1115690, 1328670, 1238000};
 
         Game game;
         for(int i = 0; i < 20; i++)
         {
-            game = new Game(i+1, games[i], descriptions[i], prices[i], genres[i], links[i]);
+            game = new Game(i+1, games[i], descriptions[i], prices[i], genres[i], links[i], steamId[i]);
             gameRepo.save(game);
 
             if(i == 10 || i == 11)
             {
-                gameLibrary = new Game_Library(admin, game);
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+                LocalDateTime localDateTime = LocalDateTime.now();
+                String date = localDateTime.format(formatter);
+                gameLibrary = new Game_Library(admin, game, date);
                 gameLibraryRepo.save(gameLibrary);
+
             }
         }
     }

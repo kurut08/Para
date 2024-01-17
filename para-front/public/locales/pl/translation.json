@@ -57,7 +57,18 @@
   "strategyGenre.label": "Strategia",
   "survivalGenre.label": "Przetrwanie",
 
-  "maxPrice.label": "Maksymalna cena"
-
+  "maxPrice.label": "Maksymalna cena",
+  "sendFriend.label": "Zaakceptuj/Odrzuć zaproszenie",
+  "true.label": "Wpisz: 'true' lub 'false'",
+  "acceptInvite.label": "Zaakeptuj lub odrzuć zaproszenie",
+  "enteruserTo.label": "Wpisz ID przyjaciela...",
+  "enteruserFrom.label": "Wpisz twoje ID...",
+  "yourid.label": "Twoje ID",
+  "friendid.label": "ID przyjaciela",
+  "sendinv.label": "Wyślij zaproszenie ",
+  "usernameprofile.label": "Nazwa użytkownika: ",
+  "owngames.label": "Posiadane gry: ",
+  "owninvites.label": "Lista zaproszeń: ",
+  "ownfriends.label": "Lista znajomych: "
 
 }
