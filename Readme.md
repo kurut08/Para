@@ -21,7 +21,8 @@ Para is a web app which contains "store pages" of games, with a button to launch
 ```
  - After it's done, launch Docker/docker-compose.yml and wait until docker container is up and running;
  - Start spring/src/main/java/ParaApplication to launch backend;
- - Go to localhost:3000 to visit the page.
+ - Go to localhost:3000 to visit the page;
+ - Go to localhost:5555 to visit PgAdmin and check database's content. Login is "pgadmin@pgadmin.org", password is "root".
 
 ## Docker container after build is finished should consist of:
  - MailDev;
