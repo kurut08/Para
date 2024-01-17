@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Added Services">
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/profile/Profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.jsx" afterDir="false" />
+    <list default="true" id="e52298ba-eb33-4460-a922-936affa46895" name="Changes" comment="Front update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/public/locales/pl/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/public/locales/pl/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/edit/Edit.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/gamelist/GameList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/home/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/para-front/src/compontents/home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/register/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/register/Register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/register/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/register/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/shop/Shop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/para-front/src/compontents/shopitem/ShopItem.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +222,7 @@
       <workItem from="1704480884024" duration="985000" />
       <workItem from="1705258834717" duration="13547000" />
       <workItem from="1705308227635" duration="4646000" />
-      <workItem from="1705485744550" duration="12618000" />
+      <workItem from="1705485744550" duration="24884000" />
     </task>
     <task id="LOCAL-00001" summary="working login demo">
       <created>1700759450337</created>
@@ -337,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705283236716</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Front update">
+      <option name="closed" value="true" />
+      <created>1705498992566</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705498992566</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +393,8 @@
     <MESSAGE value="Small changes" />
     <MESSAGE value="Added Friends and Invites" />
     <MESSAGE value="Created front for Register, Shop, Home and more in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created front for Register, Shop, Home and more in progress" />
+    <MESSAGE value="Front update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Front update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

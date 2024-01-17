@@ -11,6 +11,22 @@ body {
     flex-direction: column;
     flex-grow: 1;
 }
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-left: 80%;
+    margin-right: 2%;
+}
+
+.user-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-name{
+    color: var(--primary-text-color);
+}
 
 .shopItem .gameItem-info {
 
@@ -104,7 +120,8 @@ body {
     margin-right: 15px;
 }
 
-.buy-button {
+.buy-button,
+.buy-buttonOff{
     background-color: var(--button-bg);
     color: var(--button-text);
     border: none;

@@ -116,7 +116,7 @@ function Home() {
                             <div className="profile-content">
                                 <div className="profile-image">
                                         <img
-                                            src={user.user.avatarUrl}
+                                            src="https://cdn.discordapp.com/attachments/1112468265529258126/1197159700312109087/RDT_20240111_0717142314283480111283957.jpg?ex=65ba40da&is=65a7cbda&hm=cd89b09f2452f6734ba70c271fe21b25882be84bd38c1ddafd7e4f8c7ba87d75&"
                                             alt="User_Avatar"/>
                                 </div>
                                 <h3 className="profile-username">{user.user.username}</h3>

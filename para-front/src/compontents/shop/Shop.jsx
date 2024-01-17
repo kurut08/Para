@@ -15,6 +15,8 @@ function Shop(){
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedGenre, setSelectedGenre] = useState('');
     const [maxPrice, setMaxPrice] = useState(Infinity);
+    const userString = localStorage.getItem("user");
+    const user = JSON.parse(userString);
 
     const getGames = async () =>{
         try
@@ -70,6 +72,13 @@ function Shop(){
                 <div onClick={navigateToHome}>
                     <img src="/path/to/your/logo.png" alt="App Logo" className="app-logo"/>
                 </div>
+                <div className="user-container">
+                    <img
+                        src="https://cdn.discordapp.com/attachments/1112468265529258126/1197159700312109087/RDT_20240111_0717142314283480111283957.jpg?ex=65ba40da&is=65a7cbda&hm=cd89b09f2452f6734ba70c271fe21b25882be84bd38c1ddafd7e4f8c7ba87d75&"
+                        alt="User" className="user-image"/>
+                    <span
+                        className="user-name">{user.user.username}</span>
+                </div>
                 <div className="switch-container">
                     <Toggle/>
                 </div>
@@ -82,7 +91,7 @@ function Shop(){
                         onMaxPriceChange={price => setMaxPrice(Number(price))}
                     />
                 </div>
-                <GameList games={filteredGames} />
+                <GameList games={filteredGames}/>
             </div>
             <Footer/>
         </div>
