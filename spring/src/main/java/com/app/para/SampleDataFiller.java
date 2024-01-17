@@ -21,13 +21,15 @@ public class SampleDataFiller
     {
         if(roleRepository.findByAuthority("ADMIN").isPresent()) return;
         Role adminRole = roleRepository.save(new Role("ADMIN"));
-        roleRepository.save(new Role("USER"));
-
+        Role userRole = roleRepository.save(new Role("USER"));
         Set<Role> roles = new HashSet<>();
+        Set<Role> rolesUSer = new HashSet<>();
         roles.add(adminRole);
+        rolesUSer.add(userRole);
         ApplicationUser admin = new ApplicationUser(1, "admin@admin.com","admin", passwordEncode.encode("admin"), roles);
-
+        ApplicationUser user = new ApplicationUser(2, "user@user.com", "user", passwordEncode.encode("user"), rolesUSer);
         userRepository.save(admin);
+        userRepository.save(user);
 
         Game_Library gameLibrary = new Game_Library();
 

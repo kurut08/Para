@@ -8,6 +8,8 @@ import com.app.para.repository.InviteRepo;
 
 import java.util.List;
 import java.util.Optional;
+
+import com.app.para.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,17 +18,20 @@ public class FriendsService
 {
     @Autowired
     private FriendsRepo friendsRepo;
+    @Autowired
     private InviteRepo inviteRepo;
+    @Autowired
+    private UserRepo userRepo;
 
-    public void createInvite(ApplicationUser userFrom, ApplicationUser userTo){
-        //inviteRepo.save(new Invite(userFrom, userTo));
+    public void createInvite(String userFrom, String userTo){
+        inviteRepo.save(new Invite(Integer.parseInt(userFrom), Integer.parseInt(userTo)));
     }
-    public void acceptInvite(Invite invite, boolean accept){
+    public void acceptInvite(int userFrom, int userTo, boolean accept){
         if(accept){
-            //friendsRepo.save(new Friends( invite.getUserFrom(), invite.getUserTo()));
+            friendsRepo.save(new Friends(userRepo.getUserById(userFrom), userRepo.getUserById(userTo)));
         }
         else{
-            inviteRepo.delete(invite);
+            inviteRepo.deleteByUserFrom(userFrom);
         }
     }
     public Optional<List<Invite>> getAllInvites(Integer id){

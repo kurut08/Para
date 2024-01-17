@@ -2,7 +2,6 @@ package com.app.para.models;
 
 public class GLAuth {
     private String id;
-
     private String ok;
     private String text;
 

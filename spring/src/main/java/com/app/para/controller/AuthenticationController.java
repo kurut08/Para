@@ -92,8 +92,10 @@ public class AuthenticationController {
         return new ResponseEntity<>("Added Review", HttpStatus.OK);
     }
     @PostMapping("/user/createInvite")
-    public ResponseEntity<String> createInvite(@RequestBody Invite invite){
-        //friendsService.createInvite(invite.getUserFrom(), invite.getUserTo());
+    public ResponseEntity<String> createInvite(@RequestBody String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        InviteHelp inviteHelp = mapper.reader().forType(InviteHelp.class).readValue(json);
+        friendsService.createInvite(inviteHelp.getUserFrom(), inviteHelp.getUserTo());
         return new ResponseEntity<>("Request sent", HttpStatus.OK);
     }
     @GetMapping("/user/inviteList/{id}")
@@ -101,8 +103,11 @@ public class AuthenticationController {
         return new ResponseEntity<>(friendsService.getAllInvites(id), HttpStatus.OK);
     }
     @PostMapping("/user/acceptInvite/{id}")
-    public ResponseEntity<String> acceptInvite(@RequestBody Invite invite, boolean accept){
-        friendsService.acceptInvite(invite, accept);
+    public ResponseEntity<String> acceptInvite(@RequestBody String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        InviteHelp inviteHelp = mapper.reader().forType(InviteHelp.class).readValue(json);
+        friendsService.acceptInvite(Integer.parseInt(inviteHelp.getUserFrom()), Integer.parseInt(inviteHelp.getUserTo()), Boolean.parseBoolean(inviteHelp.getBool()));
+
         return new ResponseEntity<>("Request made!", HttpStatus.OK);
     }
     @GetMapping("/user/friendList/{id}")
@@ -127,17 +132,6 @@ public class AuthenticationController {
     public ResponseEntity<String> deleteGame(@PathVariable Integer id) {
         gameService.deleteById(id);
         return new ResponseEntity<>("DELETED", HttpStatus.OK);
-    }
-    @GetMapping("/order/{id}")
-    public ResponseEntity<Optional<List<Order>>> myOrders(@PathVariable Integer id){
-        return new ResponseEntity<>(orderService.getAllMyOrders(id), HttpStatus.OK);
-    }
-    @PostMapping("/orderNew")
-    public ResponseEntity<String> newOrder(@RequestBody String user) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        HelpOrder helpOrder = mapper.reader().forType(HelpOrder.class).readValue(user);
-        orderService.newOrder(helpOrder.getUserId(), helpOrder.getGameId());
-        return new ResponseEntity<>("Order Placed!", HttpStatus.OK);
     }
 }
 // TODO FIX MAPPING IN EVERY FUNCTION FOR USERS AND ADMIN

@@ -13,4 +13,6 @@ public interface InviteRepo extends JpaRepository<Invite, Integer>
 {
     @Query("SELECT i FROM Invite i WHERE i.userTo = :id")
     Optional<List<Invite>> findInviteById(Integer id);
+
+    void deleteByUserFrom(int userFrom);
 }
