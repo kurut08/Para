@@ -15,7 +15,7 @@
 }
 
 .game-image {
-    width: 100px;
+    width: 150px;
     margin-right: 20px;
     border-radius: 5px;
 }
@@ -41,6 +41,7 @@
     color: var(--accent-color);
     font-weight: bold;
 }
+
 
 @media (max-width: 600px) {
     .game-item {

@@ -15,6 +15,7 @@ import Shop from "./compontents/shop/Shop";
 import Library from "./compontents/library/Library";
 import Profile from "./compontents/profile/Profile";
 import Edit from "./compontents/edit/Edit";
+import ShopItem from "./compontents/shopitem/ShopItem"
 
 class App extends Component {
     constructor(props) {
@@ -62,6 +63,7 @@ class App extends Component {
                         <Route path="/shop" element={ <Shop/>} />
                         <Route path="/library" element={ <Library/>} />
                         <Route path="/edit" element={ <Edit/>} />
+                        <Route path="/shop/:itemID/:itemName" element={<ShopItem />} />
                     </Routes>
                 </BrowserRouter>
 

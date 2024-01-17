@@ -69,6 +69,10 @@
   "usernameprofile.label": "Nazwa użytkownika: ",
   "owngames.label": "Posiadane gry: ",
   "owninvites.label": "Lista zaproszeń: ",
-  "ownfriends.label": "Lista znajomych: "
+  "ownfriends.label": "Lista znajomych: ",
+  "buy.label": "Kup",
+  "owned.label": "Posiadane",
+  "logout.label": "Wyloguj się"
+
 
 }

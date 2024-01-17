@@ -69,10 +69,10 @@
   "usernameprofile.label": "Username: ",
   "owngames.label": "Own games: ",
   "owninvites.label": "Invite list: ",
-  "ownfriends.label": "Friend list: "
-
-
-
+  "ownfriends.label": "Friend list: ",
+  "buy.label": "Buy",
+  "owned.label": "Owned",
+  "logout.label": "Log out"
 
 
 
