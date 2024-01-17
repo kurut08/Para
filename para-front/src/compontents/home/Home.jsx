@@ -48,6 +48,10 @@ function Home() {
             }
         );
     }
+    function logout(){
+        localStorage.removeItem("user");
+        window.location.reload();
+    }
 
     const { t, i18n } = useTranslation();
     if(user != null){
@@ -119,7 +123,10 @@ function Home() {
                                             src="https://cdn.discordapp.com/attachments/1112468265529258126/1197159700312109087/RDT_20240111_0717142314283480111283957.jpg?ex=65ba40da&is=65a7cbda&hm=cd89b09f2452f6734ba70c271fe21b25882be84bd38c1ddafd7e4f8c7ba87d75&"
                                             alt="User_Avatar"/>
                                 </div>
-                                <h3 className="profile-username">{user.user.username}</h3>
+                                <div className="user-info">
+                                    <h3 className="profile-username">{user.user.username}</h3>
+                                    <Link to={'/home'} onClick={logout}>{t("logout.label")}</Link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -197,10 +204,10 @@ function Home() {
                     </div>
                     <div className="section-container login-section">
                         <Link to={'/login'}>
-                        <h2 className="logreg">Sign in</h2>
+                        <h2 className="logreg">{t("login.label")}</h2>
                         </Link>
                         <Link to={'/register'}>
-                        <h2 className="logreg">Register</h2>
+                        <h2 className="logreg">{t("register.label")}</h2>
                         </Link>
                     </div>
                 </div>

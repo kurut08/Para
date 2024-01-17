@@ -57,7 +57,13 @@
   "strategyGenre.label": "Strategy",
   "survivalGenre.label": "Survival",
 
-  "maxPrice.label": "Max price"
+  "maxPrice.label": "Max price",
+  "login.label": "Login",
+  "buy.label": "Buy",
+  "owned.label": "Owned",
+  "register.label": "Register",
+  "logout.label": "Log out"
+
 
 
 }

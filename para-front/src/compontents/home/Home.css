@@ -142,7 +142,7 @@
 }
 
 .logreg{
-    width: 100px;
+    width: 160px;
 
     color: var(--primary-text-color);
 }
@@ -150,6 +150,8 @@
     align-items: center;
 
 }
+
+
 
 
 

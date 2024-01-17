@@ -112,7 +112,7 @@ function ShopItem(){
                                     <p className="gameItem-genre">Genre: {game.genre}</p>
                                     <div className="purchase-container">
                                         <span className="gameItem-price">{game.price}$</span>
-                                        <button className="buy-button" onClick={buy}>Buy</button>
+                                        <button className="buy-button" onClick={buy}>{t("buy.label")}</button>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@ function ShopItem(){
                                     <p className="gameItem-genre">Genre: {game.genre}</p>
                                     <div className="purchase-container">
                                         <span className="gameItem-price">{game.price}$</span>
-                                        <button className="buy-buttonOff" disabled={true}>Bought</button>
+                                        <button className="buy-buttonOff" disabled={true}>{t("owned.label")}</button>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@ function ShopItem(){
                                     <p className="gameItem-genre">Genre: {game.genre}</p>
                                     <div className="purchase-container">
                                         <span className="gameItem-price">{game.price}$</span>
-                                        <button className="buy-button" onClick={navigateToLogin}>Login</button>
+                                        <button className="buy-button" onClick={navigateToLogin}>{t("login.label")}</button>
                                     </div>
                                 </div>
                             </div>

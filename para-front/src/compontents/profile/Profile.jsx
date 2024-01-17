@@ -31,6 +31,12 @@ export default class Profile extends Component {
             <div className="container">
                 {(this.state.userReady) ?
                     <div>
+                        <div id="drawer" className="drawer">
+                            <ul>
+                                <li>Library</li>
+                                <li>Friends</li>
+                            </ul>
+                        </div>
                         <header className="jumbotron">
                             <h3>
                                 <strong>{currentUser.username}</strong> Profile
@@ -52,9 +58,10 @@ export default class Profile extends Component {
                         <strong>Authorities:</strong>
                         <ul>
                             {currentUser.user.authorities.authority &&
-                                currentUser.user.authorities.authority.map((authority, roleId) => <li key={roleId}>{authority}</li>)}
+                                currentUser.user.authorities.authority.map((authority, roleId) => <li
+                                    key={roleId}>{authority}</li>)}
                         </ul>
-                    </div>: null}
+                    </div> : null}
             </div>
         );
     }

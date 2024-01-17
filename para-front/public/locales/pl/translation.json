@@ -58,7 +58,12 @@
   "strategyGenre.label": "Strategia",
   "survivalGenre.label": "Przetrwanie",
 
-  "maxPrice.label": "Maksymalna cena"
+  "maxPrice.label": "Maksymalna cena",
+  "login.label": "Zaloguj się",
+  "buy.label": "Kup",
+  "owned.label": "Posiadane",
+  "register.label": "Zarejestruj się",
+  "logout.label": "Wyloguj się"
 
 
 }
