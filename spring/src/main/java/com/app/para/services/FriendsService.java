@@ -19,11 +19,11 @@ public class FriendsService
     private InviteRepo inviteRepo;
 
     public void createInvite(ApplicationUser userFrom, ApplicationUser userTo){
-        inviteRepo.save(new Invite(userFrom, userTo));
+        //inviteRepo.save(new Invite(userFrom, userTo));
     }
     public void acceptInvite(Invite invite, boolean accept){
         if(accept){
-            friendsRepo.save(new Friends( invite.getUserFrom(), invite.getUserTo()));
+            //friendsRepo.save(new Friends( invite.getUserFrom(), invite.getUserTo()));
         }
         else{
             inviteRepo.delete(invite);

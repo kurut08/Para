@@ -81,17 +81,19 @@ public class AuthenticationController {
         return new ResponseEntity<>(gameLibraryService.getAllMyGames(id), HttpStatus.OK);
     }
     @GetMapping("/reviews/{gameId}")
-    public ResponseEntity<Optional<List<Game_Review>>> getReviews(@PathVariable Integer gameId){
-        return new ResponseEntity<>(gameReviewService.findReviewsByGameId(gameId), HttpStatus.OK);
+    public ResponseEntity<List<Game_Review>> getReviews(@PathVariable Integer gameId){
+        return new ResponseEntity<>(gameReviewService.findByGameId(gameId), HttpStatus.OK);
     }
     @PostMapping("/reviews/{gameId}/add")
-    public ResponseEntity<String> addReviews(@PathVariable Integer id, @RequestBody String text, boolean isOk){
-        gameReviewService.addGameReview(id, isOk, text);
+    public ResponseEntity<String> addReviews(@PathVariable Integer gameId, @RequestBody String json) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        GLAuth glAuth = mapper.reader().forType(GLAuth.class).readValue(json);
+        gameReviewService.addGameReview(gameId, Integer.valueOf(glAuth.getId()), Boolean.parseBoolean(glAuth.getOk()), glAuth.getText() );
         return new ResponseEntity<>("Added Review", HttpStatus.OK);
     }
     @PostMapping("/user/createInvite")
     public ResponseEntity<String> createInvite(@RequestBody Invite invite){
-        friendsService.createInvite(invite.getUserFrom(), invite.getUserTo());
+        //friendsService.createInvite(invite.getUserFrom(), invite.getUserTo());
         return new ResponseEntity<>("Request sent", HttpStatus.OK);
     }
     @GetMapping("/user/inviteList/{id}")

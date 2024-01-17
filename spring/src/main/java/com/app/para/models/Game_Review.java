@@ -1,55 +1,32 @@
 package com.app.para.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.io.Serializable;
 
 @Entity
 @Table(name="game_review")
-public class Game_Review
+public class Game_Review implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "game_review_id")
     private Integer id;
-    @Column(name = "type", nullable = false)
-    private Boolean type;
-    @Column(name = "text", columnDefinition = "TEXT")
-    private String text;
-
     @OneToOne
+    @JoinColumn(name = "rev_id", referencedColumnName = "id")
+    private GLHelp glHelp;
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private ApplicationUser user;
-
     @OneToOne
     @JoinColumn(name = "game_id", referencedColumnName = "id")
     private Game game;
 
     public Game_Review() { super();}
-    public Game_Review(Integer id, Boolean type)
+    public Game_Review(GLHelp glHelp, ApplicationUser user, Game game)
     {
         super();
-        this.id = id;
-        this.type = type;
-    }
-    public Game_Review(Integer id, Boolean type, String text)
-    {
-        super();
-        this.id = id;
-        this.type = type;
-        this.text = text;
-    }
-    public Game_Review(Integer id, Boolean type, String text, ApplicationUser user, Game game)
-    {
-        super();
-        this.id = id;
-        this.type = type;
-        this.text = text;
+        this.glHelp=glHelp;
         this.user = user;
         this.game = game;
     }

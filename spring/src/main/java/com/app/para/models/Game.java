@@ -18,6 +18,9 @@ public class Game {
     @Column(columnDefinition = "TEXT")
     private String url;
 
+    private int steamId;
+
+
     public Game(String title, String description, Float price, String genre) {
         super();
         this.title = title;
@@ -34,6 +37,16 @@ public class Game {
         this.price = price;
         this.genre = genre;
         this.url = url;
+    }
+    public Game(int id, String title, String description, Float price, String genre, String url, int steamId) {
+        super();
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.genre = genre;
+        this.url = url;
+        this.steamId = steamId;
     }
 
     public Game() {
@@ -73,4 +86,19 @@ public class Game {
 
     public String getUrl() { return url; }
     public void setURL(String url) { this.url = url; }
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public int getSteamId() {
+        return steamId;
+    }
+
+    public void setSteamId(int steamId) {
+        this.steamId = steamId;
+    }
 }
