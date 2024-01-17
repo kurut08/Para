@@ -29,6 +29,7 @@ public class FriendsService
     public void acceptInvite(int userFrom, int userTo, boolean accept){
         if(accept){
             friendsRepo.save(new Friends(userRepo.getUserById(userFrom), userRepo.getUserById(userTo)));
+            inviteRepo.deleteByUserFrom(userFrom);
         }
         else{
             inviteRepo.deleteByUserFrom(userFrom);
